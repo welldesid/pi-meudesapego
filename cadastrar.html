@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsivo -->
+
+    <!-- Título-->
+    <title>Meu Desapego</title>
+
+    <!-- Fonte externa-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <!-- Referência arquivo.css-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="titulo">Registre-se aqui!</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="name">Nome Completo</div>                                                            <!-- Defini a classe dos títulos dos campos como "name" para facilitar e padronizar a personalização através do css -->
+                            <div class="value">
+                                <input class="input-style" type="text" name="nomecompleto" placeholder="Seu nome aqui">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">CPF</div>                                                           
+                            <div class="value">
+                                <input class="input-style" type="text" name="cpf" placeholder="xxx.xxx.xxx-xx">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Data de Nascimento</div>                                                           
+                            <div class="value">
+                                <input class="input-style" type="date" name="data" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Rua</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input-style" type="text" name="rua" placeholder="Rua Rosa Fattore DelForno, 339">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Estado</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <select id="inputEstado" class="form-control">
+                                    <option selected>Selecionar...</option>
+                                    <option>RJ</option>
+                                    <option>SP</option>
+                                    <option>MG</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Cidade</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <select id="inputCidade" class="form-control">
+                                    <option selected>Selecionar...</option>
+                                    <option>Itatiba</option>
+                                    <option>São Paulo</option>
+                                    <option>Campinas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Bairro</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <select id="inputBairro" class="form-control">
+                                    <option selected>Selecionar...</option>
+                                    <option>Centro</option>
+                                    <option>Parque da Colina</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">E-mail</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input-style" type="email" name="email" placeholder="exemplo@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Senha</div>                                                           
+                            <div class="value">
+                                <input class="input-style" type="password" name="cpf" placeholder="Defina uma senha de acesso">
+                                <div class="name2">
+                                <label>Por favor selecione uma senha para acessar o cadastro futuramente</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
