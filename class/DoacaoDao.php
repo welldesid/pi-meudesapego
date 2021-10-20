@@ -35,5 +35,29 @@ class DoacaoDao
 		}
 		return $doacoes;
 	}
+
+	function buscaDoacao($id)
+	{
+		/*Ajustar função para buscar por categoria e doador*/
+		$query = "select iddoacao, titulo, status, dt_doacao from doacao where iddoacao = {$iddoacao}";
+
+		$resultado = mysqli_query($this->conexao, $query);
+
+		$doacao_buscada = mysqli_fetch_assoc($resultado);
+
+		/*Categoria, Doador
+		$categoria = new Categoria();
+		$categoria->setId($doacao_buscada['idcategoria']);
+
+		$doador = new Doador();
+		$doador->setId($doacao_buscada['iddoador']);
+		*/
+	}
+
+	function alteraDoacao($doacao)
+	{
+		$query = "update doacao set status = '{$doacao->getStatus()}' where iddoacao = {$doacao->getId()}";
+		return mysqli_query($this->conexao, $query);
+	}
 }
 ?>
