@@ -29,6 +29,16 @@ class Doacao{
 	}
 
 	/*Como os meus atributos são private, são acessados somente daqui de dentro da classe Doacao, desse modo, daria erro se eu quisesse acessar fora daqui. Para que não ocorra esse erro, e meus atributos consigam ser acessados de outros locais, porém ainda protegidos de eventuais acessos diretos, é preciso criar um método que acesse os atributos e retorne o valor, permitindo que outras classes tenham o valor desses atributos. No caso, seriam os sequintes métodos:*/
+	public function getId()
+	{
+		return $this->iddoacao;
+	}
+
+	public function setId($id)
+	{
+		$this->iddoacao = $iddoacao;
+	}
+
 	public function getTitulo(){
 		return $this->titulo;
 	}
