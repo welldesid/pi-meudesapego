@@ -35,7 +35,7 @@
                             <div class="name">Descrição da doação</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea-style" name="descricao" placeholder="testeDescrição do item à ser doado. Por exemplo: Cor, estado de conservação, etc."></textarea>
+                                    <textarea class="textarea-style" name="descricao" placeholder="Descrição do item à ser doado. Por exemplo: Cor, estado de conservação, etc."></textarea>
                                 </div>
                             </div>
                         </div>
