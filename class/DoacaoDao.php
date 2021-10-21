@@ -52,6 +52,15 @@ class DoacaoDao
 		$doador = new Doador();
 		$doador->setId($doacao_buscada['iddoador']);
 		*/
+	
+		$titulo = $doacao_buscada['titulo'];
+		$status = $doacao_buscada['status'];
+		$dt_doacao = $doacao_buscada['dt_doacao'];
+
+		$doacao = new Doacao($titulo, $status, $dt_doacao); //Faltam categoria e doador.
+		$doacao->setId($doacao_buscada['iddoacao']);
+
+		return $doacao;
 	}
 
 	function alteraDoacao($doacao)
