@@ -14,7 +14,7 @@ class CategoriaDao
 
 	function insereCategoria($categoria)
 	{
-		$query = "insert into categoria (categoria) values ('{$categoria->getCategoria()}')";
+		$query = "insert into categoria (nome) values ('{$categoria->getNome()}')";
 		return mysqli_query($this->conexao, $query);
 	}
 
@@ -28,7 +28,7 @@ class CategoriaDao
 			$categoria = new Categoria();
 
 			$categoria->setId($categoria_array['idcategoria']);
-			$categoria->setCategoria($categoria_array['categoria']);
+			$categoria->setNome($categoria_array['nome']);
 
 			array_push($categorias, $categoria); //coloco a lista de categorias dentro do meu array $categorias.
 		}

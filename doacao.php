@@ -1,3 +1,24 @@
+<?php 
+    require_once("conecta.php");
+    require_once("alertas.php");
+
+    //Função para carregar/chamar minhas classes da pasta class/
+    function carregaClasse($nomeDaClasse){
+        require_once("class/".$nomeDaClasse.".php");
+    }
+
+    //Função nativa que registra a minha função acima, e a roda, chamando todas as classes.
+    //Com a minha função, e essa nativa, não há necessidade de ficar chamando minhas classes em outros arquivos, já que está sendo carregadas no cabeçalho.
+    spl_autoload_register("carregaClasse");
+
+    $categoria = new Categoria();
+    $categoria->setId(1);
+
+    $doacao = new Doacao("", "", "", "Disponível", "0000-00-00", 1, $categoria, 1); //Passo os meu parâmetros vazios, são obrigatórios, segundo o que definimos na classe Produto, porém posso passar um valor vazio. Menos categoria, pois preciso trazer a listagem.
+
+    $categoriaDao = new CategoriaDao($conexao);
+    $categorias = $categoriaDao->listaCategorias();
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -44,8 +65,17 @@
                             <div class="value">
                                 <div class="input-group">
                                     <select name="idcategoria" class="form-control">
-                                        <option value="1">Móveis</option>
-                                        <option value="2">Eletromésticos</option>
+                                        <?php 
+                                            foreach ($categorias as $categoria):
+                                                $essaEhACategoria = $doacao->getCategoria()->getId() == $categoria->getId(); //Verifico se os ids batem
+                                                $selecao = $essaEhACategoria ? "selected='select'" : ""; //Se a condição acima for verdadeira, então ele atribui esse valor a minha option
+                                         ?>
+                                        <option value="<?= $categoria->getId()?>" <?= $selecao; ?>>
+                                            <?= $categoria->getNome() ?>
+                                        </option>
+                                        <?php 
+                                            endforeach;
+                                         ?>
                                     </select>
                                 </div>
                             </div>

@@ -5,12 +5,12 @@
 class Categoria
 {
 	private $idcategoria;
-	private $categoria;
+	private $nome;
 	
-	function __construct($categoria)
+	/*function __construct($nome)
 	{
-		$this->categoria = $categoria;
-	}
+		$this->nome = $nome;
+	}*/
 
 	public function getId()
 	{
@@ -21,13 +21,13 @@ class Categoria
 		$this->idcategoria = $idcategoria;
 	}
 
-	public function getCategoria()
+	public function getNome()
 	{
-		return $this->categoria;
+		return $this->nome;
 	}
-	public function setCategoria($categoria)
+	public function setNome($nome)
 	{
-		$this->categoria = $categoria;
+		$this->nome = $nome;
 	}
 }
  ?>

@@ -17,7 +17,7 @@ class Doacao{
 	Doador, Categoria e ONG são passados de maneira diferente, pois são um objeto da Classe Doador, Categoria e ONG (respectivamente), então preciso instanciá-lo para passar como parâmetro.
 	*/
 	/*Aguardar as outras classes ficarem prontas para adcioná-las da menira correta: Doador $doador, Categoria $categoria, Ong $ong*/
-	function __construct($titulo, $descricao, $foto, $status, $dt_doacao, $doador, $categoria, $ong){
+	function __construct($titulo, $descricao, $foto, $status, $dt_doacao, $doador, Categoria $categoria, $ong){
 		$this->titulo = $titulo;
 		$this->descricao = $descricao;
 		$this->foto = $foto;

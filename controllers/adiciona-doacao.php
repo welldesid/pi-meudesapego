@@ -3,7 +3,7 @@
 	//Início do que precisa estar no cabeçalho
 	//require_once("logica-usuario.php");
 	//require_once("/alertas.php");
-	require_once("/conecta.php");
+	require_once("../conecta.php");
 	//Fim do que precisa estar no cabeçalho
 	
 	//verificaUsuario();

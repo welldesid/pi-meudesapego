@@ -2,15 +2,13 @@
 	//require_once("cabecalho.php"); padronizar e criar um cabeçalho depois
 	//Início do que precisa estar no cabeçalho
 	//require_once("logica-usuario.php");
-	require_once("../alertas.php");
+	require_once("../formulario-categoria.php");
 	require_once("../conecta.php");
-	require_once("../class/Categoria.php");
-	require_once("../class/CategoriaDao.php");
 	//Fim do que precisa estar no cabeçalho
 	
 	//verificaUsuario();
 
-	$nome = $_POST["categoria"];
+	$nome = $_POST["nome"];
 
 	$categoria = new Categoria($nome);
 	$categoriaDao = new CategoriaDao($conexao);

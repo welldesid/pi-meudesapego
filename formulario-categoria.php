@@ -1,10 +1,9 @@
 <?php 
 	require_once("alertas.php");
-	require_once("conecta.php");
 
 	//Função para carregar/chamar minhas classes da pasta class/
 	function carregaClasse($nomeDaClasse){
-		require_once("class/".$nomeDaClasse.".php");
+		require_once("../class/".$nomeDaClasse.".php");
 	}
 
 	//Função nativa que registra a minha função acima, e a roda, chamando todas as classes.
@@ -55,8 +54,8 @@
 				 	<div class="card-body">
 				 		<form action="controllers/adiciona-categoria.php" method="post">
 						 	<div class="mb-3">
-						 		<label for="categoria" class="form-label">Categoria:</label>
-						 		<input type="text" name="categoria" class="form-control" id="categoria">
+						 		<label for="nome" class="form-label">Categoria:</label>
+						 		<input type="text" name="nome" class="form-control" id="categoria">
 						 	</div>
 						 	<button type="submit" class="btn btn-primary">Cadastrar</button>
 						 </form>
