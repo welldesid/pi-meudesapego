@@ -16,7 +16,7 @@ class Categoria
 	{
 		return $this->idcategoria;
 	}
-	public function setId($idcategoria')
+	public function setId($idcategoria)
 	{
 		$this->idcategoria = $idcategoria;
 	}
