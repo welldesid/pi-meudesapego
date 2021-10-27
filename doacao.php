@@ -92,11 +92,10 @@
                             </div>
                         </div>
                         
-
+                        <div class="card-footer">
+                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Doar!</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Doar!</button>
                 </div>
             </div>
         </div>
