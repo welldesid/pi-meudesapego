@@ -45,7 +45,7 @@
                     <h2 class="titulo">Registre uma doação</h2>
                 </div>
                 <div class="card-body">
-                    <form action="controllers/adiciona-doacao.php" method="post">
+                    <form action="controllers/adiciona-doacao.php" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="name">Título</div>                                                           <!-- Defini a classe dos títulos dos campos como "name" para facilitar e padronizar a personalização através do css -->
                             <div class="value">
@@ -83,12 +83,8 @@
                         <div class="form-row">
                             <div class="name">Foto</div>
                             <div class="value">
-                                <div class="input-group">
-                                    <input class="input-file" type="foto" name="foto" id="foto">
-                                    <label class="label--file" for="foto">Selecione a foto</label>
-                                    <span class="input-file__info">Sem arquivos selecionados</span>
-                                </div>
-                                <div class="label--desc">Selecione fotos nas extensões JPEG ou PNG. Tamanho máximo 50Mb</div>
+                                <input class="" type="file" name="foto" id="foto">
+                                <div class="label--desc">Selecione fotos nas extensões JPEG ou PNG. Tamanho máximo 1MB</div>
                             </div>
                         </div>
                         
