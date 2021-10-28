@@ -35,5 +35,11 @@ class CategoriaDao
 
 		return $categorias;
 	}
+
+	function deletaCategoria($idcategoria)
+	{
+		$query = "delete from categoria where idcategoria = {$idcategoria}";
+		return mysqli_query($this->conexao, $query);
+	}
 }
  ?>

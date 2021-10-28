@@ -7,6 +7,7 @@ class Categoria
 	private $idcategoria;
 	private $nome;
 	
+	/*Resolver esse problemas, pois não está adionando por conta desse trecho comentado*/
 	/*function __construct($nome)
 	{
 		$this->nome = $nome;
