@@ -7,11 +7,10 @@
 
     <!-- Título-->
     <title>Meu Desapego</title>
-    <link rel="icon" href="images/logofav.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
+    <link rel="icon" href="images/tj417.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
 
     <!-- Fonte externa-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
 
     <!-- Referência arquivos externos-->
     <link href="css/main.css" rel="stylesheet" media="all">
@@ -19,7 +18,7 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-blue p-t-100 p-b-50">
+    <div class="page-wrapper bg-red p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
@@ -39,8 +38,8 @@
                                 <input class="input-style" type="date" id="datanasc" name="datanasc" placeholder="">
                             </div>
                         </div>
-
-                        <div class="form-row">
+                        <!-- Trecho que pode ser removido ***
+                            <div class="form-row">
                             <div class="name">CEP</div>
                             <div class="value">
                                 <div class="input-group">
@@ -97,6 +96,8 @@
                                     </div>
                                 </div>
                         </div>
+                    -->
+                 
                         <div class="form-row">
                             <div class="name">E-mail</div>
                             <div class="value">
@@ -115,10 +116,25 @@
                             </div>
                         </div>
 
+                        <div class="form-row">
+                            <div class="name">Informativos</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input-style" type="checkbox" id="infosong" name="infosong">
+                                        <div class="name">
+                                            <label>Deseja receber informativos da ONG?</label>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                        </div>
+
+
+
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button class="btn2 btn--radius-2 btn--blue-2" type="submit">Registrar</button>
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Registrar</button>
                 </div>
             </div>
         </div>
