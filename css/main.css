@@ -230,6 +230,9 @@ h6 {
 .bg-blue {
   background: #2c6ed5;
 }
+.bg-red { 
+  background: rgba(255, 4, 4, 0.438);
+}
 
 .bg-gra-01 {
   background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#b721ff));
