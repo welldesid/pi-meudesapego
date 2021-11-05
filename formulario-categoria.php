@@ -87,15 +87,21 @@
 					 		 		<th scope="row"><?= $categoria->getId();?></th>
 									<td><?= $categoria->getNome();?></td>
 					 		 		<td>
-						 				<a href="formulario-altera-categoria.php?idcategoria=<?= $categoria->getId(); ?>" class="btn btn-outline-info" title="Editar">
-						 					<i class="bi bi-pencil-square"> Editar</i>
-						 				</a>
-						 				<form action="controllers/remove-categoria.php" method="post">
-						 					<input type="hidden" name="idcategoria" value="<?= $categoria->getId(); ?>">
-						 					<button class="btn btn-outline-danger">
-							 					<i class="bi bi-trash"> Excluir</i>
-							 				</button>
-						 				</form>
+					 		 			<div class="row">
+					 		 				<div class="col">
+					 		 					<a href="formulario-altera-categoria.php?idcategoria=<?= $categoria->getId(); ?>" class="btn btn-outline-info" title="Editar">
+								 					<i class="bi bi-pencil-square"> Editar</i>
+								 				</a>
+					 		 				</div>
+					 		 				<div class="col">
+					 		 					<form action="controllers/remove-categoria.php" method="post">
+								 					<input type="hidden" name="idcategoria" value="<?= $categoria->getId(); ?>">
+								 					<button class="btn btn-outline-danger">
+									 					<i class="bi bi-trash"> Excluir</i>
+									 				</button>
+								 				</form>
+					 		 				</div>
+					 		 			</div>
 						 			</td>
 					 		 	</tr>
 					 		 <?php endforeach;?>
