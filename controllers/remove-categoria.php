@@ -10,16 +10,14 @@
 	
 	//verificaUsuario();
 	
-	$categoria = new Categoria();
-	$categoria->setId($_POST["idcategoria"]);
+	$id = $_POST['idcategoria'];
 
 	$categoriaDao = new CategoriaDao($conexao);
 
-	if ($categoriaDao->deletaCategoria($categoria)) {
-		$_SESSION["success"] = "Categoria removida com sucesso!";
-
-		header("Location: ../formulario-categoria.php"); //Após remoção, redireciona para a minha listagem, afirmando que foi removido
-		die(); //SEMPRE depois de um location, é preciso fazer um die, para que ele pare a execução a partir daqui. Por questões de Segurança
+	if ($categoriaDao->deletaCategoria($id)) {
+?>
+		<p class="alert-success">Categoria excluida com sucesso!</p>
+<?php
 	} else{
 		$msg = mysqli_error($conexao); //me devolve uma mensagem de erro
 ?>

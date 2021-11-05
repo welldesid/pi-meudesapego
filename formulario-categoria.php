@@ -78,14 +78,14 @@
 						 		</tr>
 						 	</thead>
 						 	<tbody>
-					 		<?php 
+						 	<?php 
 					 			$categoriaDao = new CategoriaDao($conexao);
 					 			$categorias = $categoriaDao->listaCategorias();
 					 			foreach ($categorias as $categoria):
 					 		 ?>
 					 		 	<tr>
-					 		 		<th scope="row"><?= $categoria->getId(); ?></th>
-					 		 		<td><?= $categoria->getNome(); ?></td>
+					 		 		<th scope="row"><?= $categoria->getId();?></th>
+									<td><?= $categoria->getNome();?></td>
 					 		 		<td>
 						 				<button type="button" class="btn btn-outline-info" title="Editar">
 						 					<i class="bi bi-pencil-square"> Editar</i>
@@ -98,11 +98,9 @@
 						 				</form>
 						 			</td>
 					 		 	</tr>
-					 		 <?php 
-					 		 	endforeach;
-					 		  ?>
+					 		 <?php endforeach;?>
 						 	</tbody>
-						 </table>
+						</table>
 				 	</div>
 				 	<br>
 
@@ -124,5 +122,4 @@
 			</div>
 		</div>
  	</body>
-
  </html>
