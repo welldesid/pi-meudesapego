@@ -41,5 +41,11 @@ class CategoriaDao
 		$query = "delete from categoria where idcategoria = {$idcategoria}";
 		return mysqli_query($this->conexao, $query);
 	}
+
+	function alteraCategoria($categoria)
+	{
+		$query = "update categoria set nome = '{$categoria->getNome()}' where idcategoria = {$categoria->getId()}";
+		return mysqli_query(this->conexao, $query);
+	}
 }
  ?>
