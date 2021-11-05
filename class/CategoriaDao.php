@@ -42,10 +42,25 @@ class CategoriaDao
 		return mysqli_query($this->conexao, $query);
 	}
 
+	/* Função usada para buscar a categoria específica, para enviar para a a view de alteração */
+	function buscaCategoria($idcategoria)
+	{
+		$query = "select * from categoria where idcategoria = {$idcategoria}";
+		$resultado = mysqli_query($this->conexao, $query);
+		$categoria_buscada = mysqli_fetch_assoc($resultado);
+
+		$nome = $categoria_buscada['nome'];
+
+		$categoria = new Categoria($nome);
+		$categoria->setId($categoria_buscada['idcategoria']);
+
+		return $categoria;
+	}
+
 	function alteraCategoria($categoria)
 	{
 		$query = "update categoria set nome = '{$categoria->getNome()}' where idcategoria = {$categoria->getId()}";
-		return mysqli_query(this->conexao, $query);
+		return mysqli_query($this->conexao, $query);
 	}
 }
  ?>
