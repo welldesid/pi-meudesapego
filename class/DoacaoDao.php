@@ -38,28 +38,33 @@ class DoacaoDao
 		return $doacoes;
 	}
 
-	function buscaDoacao($id)
+	function buscaDoacao($iddoacao)
 	{
-		/*Ajustar função para buscar por categoria e doador*/
-		$query = "select iddoacao, titulo, status, dt_doacao from doacao where iddoacao = {$iddoacao}";
+		$query = "select * from doacao where iddoacao = {$iddoacao}";
 
 		$resultado = mysqli_query($this->conexao, $query);
 
 		$doacao_buscada = mysqli_fetch_assoc($resultado);
 
-		/*Categoria, Doador
 		$categoria = new Categoria();
 		$categoria->setId($doacao_buscada['idcategoria']);
+
+		/* 
+		Doador		
 
 		$doador = new Doador();
 		$doador->setId($doacao_buscada['iddoador']);
 		*/
 	
 		$titulo = $doacao_buscada['titulo'];
+		$descricao = $doacao_buscada['descricao'];
+		$foto = $doacao_buscada['foto'];
 		$status = $doacao_buscada['status'];
 		$dt_doacao = $doacao_buscada['dt_doacao'];
+		$iddoador = 1; //provisório
+		$idong = 1;
 
-		$doacao = new Doacao($titulo, $status, $dt_doacao); //Faltam categoria e doador.
+		$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, $categoria, $idong); //Falta doador.
 		$doacao->setId($doacao_buscada['iddoacao']);
 
 		return $doacao;

@@ -34,7 +34,7 @@ class Doacao{
 		return $this->iddoacao;
 	}
 
-	public function setId($id)
+	public function setId($iddoacao)
 	{
 		$this->iddoacao = $iddoacao;
 	}
