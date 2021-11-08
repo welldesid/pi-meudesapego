@@ -1,15 +1,6 @@
 <?php 
-	//require_once("cabecalho.php"); padronizar e criar um cabeçalho depois
-	//Início do que precisa estar no cabeçalho
-	//require_once("logica-usuario.php");
-	require_once("../alertas.php");
-	require_once("../conecta.php");
-	require_once('../class/Doacao.php');
-	require_once('../class/DoacaoDao.php');
-	require_once('../class/Categoria.php');
-	require_once('../class/CategoriaDao.php');
-	//Fim do que precisa estar no cabeçalho
-	
+	require_once("../cabecalho-forcontrollers.php");
+		
 	//verificaUsuario();
 	//
 	$categoria = new Categoria();
@@ -81,5 +72,5 @@
 
 	mysqli_close($conexao);
 
-	//require_once("rodape.php");
+	require_once("../rodape.php");
  ?>

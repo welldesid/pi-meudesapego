@@ -1,11 +1,11 @@
 <?php
 	//require_once("logica-usuario.php");
-	require_once("alertas.php");
-	require_once("conecta.php");
+	require_once("../alertas.php");
+	require_once("../conecta.php");
 
 	//Função para carregar/chamar minhas classes da pasta class/
 	function carregaClasse($nomeDaClasse){
-		require_once("class/".$nomeDaClasse.".php");
+		require_once("../class/".$nomeDaClasse.".php");
 	}
 
 	//Função nativa que registra a minha função acima, e a roda, chamando todas as classes.
@@ -16,8 +16,8 @@
  	<head>
  		<meta charset="utf-8">
  		<title>Doações</title>
- 		<link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.css">
- 		<link rel="stylesheet" type="text/css" href="css/categoria.css">
+ 		<link rel="stylesheet" type="text/css" href="../bootstrap-5.1.3-dist/css/bootstrap.css">
+ 		<link rel="stylesheet" type="text/css" href="../css/categoria.css">
  		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
  	</head>
@@ -29,9 +29,9 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="nav navbar-nav">
-						<li><a href="doacao-formulario.php" class="nav-link">Adiciona Doação</a></li>
+						<li><a href="../doacao-formulario.php" class="nav-link">Adiciona Doação</a></li>
 						<li><a href="#" class="nav-link">Doações</a></li>
-						<li><a href="formulario-categoria.php" class="nav-link">Categoria</a></li>
+						<li><a href="../formulario-categoria.php" class="nav-link">Categoria</a></li>
 						<li><a href="contato.php" class="nav-link">Contato</a></li>
 					</ul>
 				</div>
