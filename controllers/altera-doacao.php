@@ -14,7 +14,7 @@
 	$doador = 1; //Pegar o id de quem está logado no momento
 	$ong = 1; //Fixar por enquanto o id da ONG
 
-	var_dump($status);
+	//var_dump($status);
 
 	$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $doador, $categoria, $ong);
 	$doacao->setId($_POST['iddoacao']);

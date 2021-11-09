@@ -23,11 +23,12 @@ class DoacaoDao
 	function listaDoacoes()
 	{
 		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select titulo, foto, status from doacao");
+		$resultado = mysqli_query($this->conexao, "select titulo, foto, status from doacao"); //e categoria
 		while ($doacao_array = mysqli_fetch_assoc($resultado)){
 			$titulo = $doacao_array['titulo'];
 			$foto = $doacao_array['foto'];
 			$status = $doacao_array['status'];
+			//$categoria = $doacao_array['idcategoria'];
 
 			$doacao = new Doacao($titulo, $foto, $status);
 

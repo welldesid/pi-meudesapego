@@ -2,14 +2,7 @@
 				require_once("cabecalho.php");
 
 				//verificaUsuario();
-				
-				/*$categoria = new Categoria();
-			    $categoria->setId(1);
 
-			    $doacao = new Doacao("", "", "", "Disponível", "0000-00-00", 1, $categoria, 1); //Passo os meu parâmetros vazios, são obrigatórios, segundo o que definimos na classe Produto, porém posso passar um valor vazio. Menos categoria, pois preciso trazer a listagem.
-
-			    $categoriaDao = new CategoriaDao($conexao);
-			    $categorias = $categoriaDao->listaCategorias();*/
 			    $categoriaDao = new CategoriaDao($conexao);
 			    $categorias = $categoriaDao->listaCategorias();
 
@@ -24,8 +17,11 @@
 					pointer-events: none;
 					touch-action: none;
 				}
+				#foto{
+					width: 50%;
+				}
 			</style>
-				<div class="card" id="cardcategoria">
+				<div class="card" id="carddoacao">
 				 	<div class="card-header">
 				 		Gerenciar Doação
 				 	</div>
@@ -66,7 +62,7 @@
 								<label for="foto" class="col-sm-2 col-form-label">Foto:</label>
 								<div class="col-sm-9">
 									<input type="hidden" name="foto">
-									Foto aqui
+									<img id="foto" src="uploads/<?= $doacao->getFoto()?>">
 								</div>
 							</div>
 							<div class="row mb-4">
@@ -81,7 +77,7 @@
 							</div>
 							<br>
 						 	<div class="col-auto">
-						 		<button type="submit" class="btn btn-primary btn-lg" name="status">Alterar</button>
+						 		<button type="submit" class="btn btn-primary btn-lg">Alterar</button>
 						 	</div>
 						</form>
 					<?php require_once("rodape.php"); ?>
