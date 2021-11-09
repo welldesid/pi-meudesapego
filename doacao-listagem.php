@@ -11,42 +11,44 @@
 				 		Gerenciar Doação
 				 	</div>
 				 	<div class="card-body">
-				 		<div class="row row-cols-1 row-cols-md-3 g-4">
-						  <div class="col">
-						    <div class="card h-100">
-						      <img src="..." class="card-img-top" alt="...">
-						      <div class="card-body">
-						        <h5 class="card-title">Card title</h5>
-						        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						      </div>
-						      <div class="card-footer">
-						        <small class="text-muted">Last updated 3 mins ago</small>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col">
-						    <div class="card h-100">
-						      <img src="..." class="card-img-top" alt="...">
-						      <div class="card-body">
-						        <h5 class="card-title">Card title</h5>
-						        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-						      </div>
-						      <div class="card-footer">
-						        <small class="text-muted">Last updated 3 mins ago</small>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col">
-						    <div class="card h-100">
-						      <img src="..." class="card-img-top" alt="...">
-						      <div class="card-body">
-						        <h5 class="card-title">Card title</h5>
-						        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-						      </div>
-						      <div class="card-footer">
-						        <small class="text-muted">Last updated 3 mins ago</small>
-						      </div>
-						    </div>
-						  </div>
-						</div>
+				 		<div class="container">
+				 			<div class="row">
+					 		<?php
+				 				foreach ($doacoes as $doacao):
+				 			?>
+								<div class="col-md-3 col-xs-12 g-4">
+						    		<div class="card h-100">
+						    			<img src="uploads/<?= $doacao->getFoto()?>" class="card-img-top img-fluid" alt="Foto Doação">
+						      			<div class="card-body">
+						        			<h5 class="card-title"><?= $doacao->getTitulo(); ?></h5>
+						        			<p class="card-text">Status: <?= $doacao->getStatus(); ?></p>
+						     			</div>
+						     			<div class="card-footer">
+						      				<a href="doacao-altera-formulario.php?iddoacao=<?= $doacao->getId(); ?>" class="btn btn-primary">Gerenciar</a>
+						      			</div>
+						    		</div>
+						  		</div>
+							<?php
+			 					endforeach;
+			 				?>
+							</div>
+				 		</div>
+					</div>
+					<br>
+					<br>
+					<hr>
+					<!-- PAGINAÇÃO -->
+				 	<nav aria-label="Page navigation example">
+					  <ul class="pagination justify-content-center">
+					    <li class="page-item disabled">
+					      <a class="page-link">Anterior</a>
+					    </li>
+					    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item">
+					      <a class="page-link" href="#">Próximo</a>
+					    </li>
+					  </ul>
+					</nav>
 					<?php require_once("rodape.php"); ?>

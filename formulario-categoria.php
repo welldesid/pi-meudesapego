@@ -28,8 +28,8 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="nav navbar-nav">
-						<li><a href="doacao.php" class="nav-link">Adiciona Doação</a></li>
-						<li><a href="#" class="nav-link">Doações</a></li>
+						<li><a href="doacao-formulario.php" class="nav-link">Adiciona Doação</a></li>
+						<li><a href="doacao-listagem.php" class="nav-link">Doações</a></li>
 						<li><a href="formulario-categoria.php" class="nav-link">Categoria</a></li>
 						<li><a href="contato.php" class="nav-link">Contato</a></li>
 					</ul>
