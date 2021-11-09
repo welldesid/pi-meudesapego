@@ -3,7 +3,7 @@
 		
 	//verificaUsuario();
 	//
-	$categoria = new Categoria();
+	$categoria = new Categoria('');
 	$categoria->setId($_POST["idcategoria"]);
 	//
 	//$doador = new Doador();

@@ -26,7 +26,7 @@ class DoacaoDao
 		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria");
 		//var_dump($resultado);
 		while ($doacao_array = mysqli_fetch_assoc($resultado)){
-			$categoria = new Categoria();
+			$categoria = new Categoria('');
 			$categoria->setNome($doacao_array['nome']);
 
 			$titulo = $doacao_array['titulo'];
@@ -51,7 +51,7 @@ class DoacaoDao
 
 		$doacao_buscada = mysqli_fetch_assoc($resultado);
 
-		$categoria = new Categoria();
+		$categoria = new Categoria('');
 		$categoria->setId($doacao_buscada['idcategoria']);
 
 		/* 
