@@ -3,7 +3,7 @@
 		
 	//verificaUsuario();
 	
-	$categoria = new Categoria();
+	$categoria = new Categoria('');
 	$categoria->setId($_POST["idcategoria"]);
 
 	$titulo = $_POST["titulo"];
