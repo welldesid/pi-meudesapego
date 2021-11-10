@@ -12,6 +12,16 @@
 		//Nesse if, verifico se o usuário tem permissão de acessar essa página
 		if (!usuarioEstaLogado()) {
 			$_SESSION['danger'] = "Você não tem permissão para acessar essa página!";
+			header("Location: index.php");
+			die();
+		}
+	}
+
+	function verificaUsuarioForControllers()
+	{
+		//Nesse if, verifico se o usuário tem permissão de acessar essa página
+		if (!usuarioEstaLogado()) {
+			$_SESSION['danger'] = "Você não tem permissão para acessar essa página!";
 			header("Location: ../index.php");
 			die();
 		}

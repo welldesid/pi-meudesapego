@@ -1,7 +1,5 @@
 <?php 
 	require_once("cabecalho.php");
-
-	//verificaUsuario();
 ?>
 				 <div class="card" id="cardcategoria">
 				 	<div class="card-header">

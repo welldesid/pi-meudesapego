@@ -7,7 +7,7 @@
 		<h1>Seja bem-vindo ao sistema de doações!</h1>
 <?php
 	} else {
-		header("Location: ../login.php");
+		header("Location: login.php");
 	}
 	
 	require_once("rodape.php");

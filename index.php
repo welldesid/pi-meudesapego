@@ -1,3 +1,7 @@
+<?php
+  require_once("controllers/logica-usuario.php");
+  require_once("alertas.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -54,7 +58,7 @@
                 <a href="" class="nav-link">Inscrever-se</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">Entrar</a>
+                <a href="login.php" class="nav-link">Entrar</a>
               </li>
             </ul>
           </div>
@@ -64,6 +68,10 @@
     </header><!--/fim Cabecalho -->
 
     <section id="home" class="d-flex"><!--home -->
+      <?php
+        mostraAlerta("success");
+        mostraAlerta("danger");
+      ?>
       <div class="container align-self-center"><!--container -->
           <div class="col-md-12 capa"> 
             <section id="recursos" class="caixa">

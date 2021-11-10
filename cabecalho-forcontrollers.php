@@ -11,6 +11,8 @@
 	//Função nativa que registra a minha função acima, e a roda, chamando todas as classes.
 	//Com a minha função, e essa nativa, não há necessidade de ficar chamando minhas classes em outros arquivos, já que está sendo carregadas no cabeçalho.
 	spl_autoload_register("carregaClasse");
+
+	verificaUsuarioForControllers();
  ?>
 <html>
  	<head>
