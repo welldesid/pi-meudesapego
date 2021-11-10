@@ -1,8 +1,6 @@
 <?php 
 	require_once("cabecalho.php");
 
-	//verificaUsuario();
-	
 	$idcategoria = $_GET['idcategoria'];
 	$categoriaDao = new CategoriaDao($conexao);
 	$categoria = $categoriaDao->buscaCategoria($idcategoria);

@@ -1,5 +1,5 @@
 <?php
-	//require_once("logica-usuario.php");
+	require_once("controllers/logica-usuario.php");
 	require_once("alertas.php");
 	require_once("conecta.php");
 
@@ -11,6 +11,8 @@
 	//Função nativa que registra a minha função acima, e a roda, chamando todas as classes.
 	//Com a minha função, e essa nativa, não há necessidade de ficar chamando minhas classes em outros arquivos, já que está sendo carregadas no cabeçalho.
 	spl_autoload_register("carregaClasse");
+
+	verificaUsuario();
  ?>
 <html>
  	<head>
@@ -36,11 +38,11 @@
 					</ul>
 				</div>
 				<?php  
-					//if (usuarioEstaLogado()) {
+					if (usuarioEstaLogado()) {
 				?>
-					<a href="logout.php">Sair</a>
+					<a href="controllers/logout.php">Sair</a>
 				<?php
-					//}
+					}
 				?>
 			</div>
 		</div>

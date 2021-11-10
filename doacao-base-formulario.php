@@ -1,3 +1,7 @@
+							<?php
+								require_once("controllers/logica-usuario.php");
+								verificaUsuario();
+							?>
 							<div class="row mb-4">
 								<label for="titulo" class="col-sm-2 col-form-label">Título:</label>
 								<div class="col-sm-9">
