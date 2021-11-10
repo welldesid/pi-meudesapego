@@ -1,5 +1,5 @@
 <?php
-	//require_once("logica-usuario.php");
+	require_once("logica-usuario.php");
 	require_once("../alertas.php");
 	require_once("../conecta.php");
 
@@ -36,11 +36,11 @@
 					</ul>
 				</div>
 				<?php  
-					//if (usuarioEstaLogado()) {
+					if (usuarioEstaLogado()) {
 				?>
-					<a href="logout.php">Sair</a>
+					<a href="controllers/logout.php">Sair</a>
 				<?php
-					//}
+					}
 				?>
 			</div>
 		</div>

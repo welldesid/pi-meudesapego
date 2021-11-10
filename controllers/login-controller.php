@@ -1,6 +1,8 @@
 <?php
 	require_once("busca-usuario.php");
-	require_once("logica-usuario");
+	require_once("logica-usuario.php");
+
+	$usuario = buscaUsuario($conexao, $_POST['email'], $_POST['senha']);
 
 	if ($usuario == null) {
 		$_SESSION['danger'] = "E-mail ou senha incorretos";
@@ -10,5 +12,5 @@
 		criaCookie($usuario["email"]);
 		header("Location: ../logado.php"); //se corretos loga no sistema na tela padrão para todos.
 	}
-	
+	die();
 ?>
