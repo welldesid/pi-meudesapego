@@ -27,9 +27,22 @@
 		}
 	}
 
-	/*
-		CRIAR FUNÇÃO PARA VERIFICAR PERFIL DE ACESSO
-	*/
+	function recebeNivel($nivel)
+	{
+		return $nivel;
+	}
+
+	function verificaNivelAcesso()
+	{
+		//Nesse if verifico se o usuário tem permissão de nível de acesso
+		if (recebeNivel() != 1 or recebeNivel() != 2) {
+			# Caso não tenha nível de acesso 1 ou 2, é redirecionado para a tela de cadastro de doacões
+			$_SESSION['danger'] = "Você não tem permissão para acessar essa página!";
+			header("Location: ../index.php");
+			die();
+		}
+		
+	}
 
 	function usuario()
 	{
