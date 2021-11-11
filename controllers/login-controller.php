@@ -10,7 +10,9 @@
 	} else {
 		$_SESSION['success'] = "Seja bem-vindo ao sistema de doações!";
 		criaCookie($usuario["email"]);
-		recebeNivel($usuario["idnivel"]);
+
+		$_SESSION['idnivel'];
+
 		header("Location: ../logado.php"); //se corretos loga no sistema na tela padrão para todos.
 	}
 	die();

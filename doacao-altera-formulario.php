@@ -1,7 +1,7 @@
 			<?php 
 				require_once("cabecalho.php");
 
-				//verificaUsuario();
+				verificaNivelAcesso();
 
 			    $categoriaDao = new CategoriaDao($conexao);
 			    $categorias = $categoriaDao->listaCategorias();

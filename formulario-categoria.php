@@ -1,5 +1,6 @@
 <?php 
 	require_once("cabecalho.php");
+	verificaNivelAcesso();
 ?>
 				 <div class="card" id="cardcategoria">
 				 	<div class="card-header">
