@@ -8,6 +8,10 @@
 		$query = "select * from doador where email = '{$email}' and senha = '{$senhaMd5}'";
 		$resultado = mysqli_query($conexao, $query);
 
-		return mysqli_fetch_assoc($resultado);
+		$usuario_buscado = mysqli_fetch_assoc($resultado);
+
+		$_SESSION['idnivel'] = $usuario_buscado['idnivel'];
+		
+		return $usuario_buscado;
 	}
 ?>

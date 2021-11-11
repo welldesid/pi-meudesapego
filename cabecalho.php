@@ -27,7 +27,7 @@
  		<div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="index.php" class="navbar-brand">Meu Desapego</a>
+					<a href="logado.php" class="navbar-brand">Meu Desapego</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="nav navbar-nav">

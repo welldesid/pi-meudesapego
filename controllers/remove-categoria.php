@@ -1,7 +1,7 @@
 <?php 
 	require_once("../cabecalho-forcontrollers.php");
 	
-	//verificaUsuario();
+	verificaNivelAcesso();
 	
 	$id = $_POST['idcategoria'];
 

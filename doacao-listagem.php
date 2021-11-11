@@ -1,7 +1,7 @@
 				<?php 
 					require_once("cabecalho.php");
 
-					//verificaUsuario();
+					verificaNivelAcesso();
 
 				    $doacaoDao = new DoacaoDao($conexao);
 					$doacoes = $doacaoDao->listaDoacoes();
