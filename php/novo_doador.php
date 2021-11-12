@@ -13,28 +13,11 @@
 
 	<body>
 		<?php if( isset($_GET['inclusao']) && $_GET['inclusao'] == 1 ) { ?>
-			<div class="alert hide">
-				<span class="fas fa-exclamation-circle"></span>
-				<span class="msg">Warning: This is a warning alert!</span>
-				<div class="close-btn">
-					<span class="fas fa-times"></span>
-				</div>
-			</div>
-			<script>
-				$('button').click(function(){
-				$('.alert').addClass("show");
-				$('.alert').removeClass("hide");
-				$('.alert').addClass("showAlert");
-				setTimeout(function(){
-					$('.alert').removeClass("show");
-					$('.alert').addClass("hide");
-				},5000);
-				});
-				$('.close-btn').click(function(){
-				$('.alert').removeClass("show");
-				$('.alert').addClass("hide");
-				});
-			</script>
+			header('Location: novo_doador.php?inclusao=1');
+
+
+
+
 		<?php } ?>
 	</body>
 </html>
