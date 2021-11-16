@@ -55,7 +55,7 @@
               <li class="nav-item divisor"></li>
 
               <li class="nav-item">
-                <a href="" class="nav-link">Inscrever-se</a>
+                <a href="cad_doador.html" class="nav-link">Inscrever-se</a>
               </li>
               <li class="nav-item">
                 <a href="login.php" class="nav-link">Entrar</a>
