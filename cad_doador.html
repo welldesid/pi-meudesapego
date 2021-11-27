@@ -7,7 +7,7 @@
 
     <!-- Título-->
     <title>Meu Desapego</title>
-    <link rel="icon" href="images/tj417.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
+    <link rel="icon" href="images/meudesapego.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
 
     <!-- Fonte externa-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -18,14 +18,14 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-red p-t-100 p-b-50">
+    <div class="page-wrapper bg-blue p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
                     <h2 class="titulo">Registre-se aqui!</h2>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="php/doador_controller.php?acao=inserir"> <!--Interação com BD-->
+                    <form method="post" action="doador_controller.php?acao=inserir"> <!--Interação com BD-->
                         <div class="form-row">
                             <div class="name">Nome Completo</div>                                                            <!-- Defini a classe dos títulos dos campos como "name" para facilitar e padronizar a personalização através do css -->
                             <div class="value">
@@ -42,7 +42,7 @@
                             <div class="name">CEP</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input-style" type="text" id="cep" name="cep" placeholder="">
+                                   <input class="input-style" type="text" id="cep" name="cep" placeholder="">
                                 </div>
                             </div>
                         </div>  
@@ -63,6 +63,17 @@
                                 <div class="input-group">
                                     <div class="input-group">
                                     <input class="input-style" type="text" id="numero" name="numero" placeholder="">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Complemento</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="input-group">
+                                    <input class="input-style" type="text" id="complemento" name="complemento" placeholder="">
                                 </div>
                                 </div>
                             </div>
@@ -112,15 +123,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form-row">
-                            <div class="name">Informativos</div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Desejo reveber informativos da ONG1.
-                                    </label>
-                                    </div>
                         </div>
                         <div class="card-footer">
                             <button class="btn btn--radius-2 btn--blue-2" type="submit">Registrar</button>

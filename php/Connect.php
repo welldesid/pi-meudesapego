@@ -16,6 +16,10 @@ class ConexaoPDO {
 				"$this->user",
 				"$this->pass"				
 			);
+			
+
+
+
 
 			return $conexao;
 
@@ -24,6 +28,13 @@ class ConexaoPDO {
 			echo '<p>'.$e->getMessage().'</p>';
 		}
 	}
+
+
+
+
+
+
+
 }
 
 ?>
