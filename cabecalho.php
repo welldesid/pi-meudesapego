@@ -22,12 +22,23 @@
  		<link rel="stylesheet" type="text/css" href="css/categoria.css">
  		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+ 		<style>
+ 			body{
+ 				background: url(images/fa6.png);
+ 				background-attachment: fixed;
+ 				font-family: Helvetica,Arial,sans-serif;
+ 			}
+ 		</style>
+
+
  	</head>
  	<body>
  		<div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="logado.php" class="navbar-brand">Meu Desapego</a>
+					<a href="logado.php" class="navbar-brand">
+						<img src="images/meud.png" width="50px">
+					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="nav navbar-nav">

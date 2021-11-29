@@ -22,6 +22,10 @@
         <div>
           <input type="submit" class="submit" value="Logar">
         </div>
+
+        <div>
+          <a href="cad_doador.html">Ainda não sou cliente</a>
+        </div>
       </form>
     </div>
     

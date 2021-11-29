@@ -15,16 +15,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!-- HTML5Shiv -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
-
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
     <title>Meu Desapego</title>
-    <link rel="icon" href="images/logofav.png">
+    <link rel="icon" href="logo_art/favicon.png">
   </head>
   <body>
     
@@ -32,8 +27,8 @@
       <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
         <div class="container">
           
-          <a href="index.html" class="navbar-brand">
-            <img src="images/logo4.svg" width="142">
+          <a href="index.php" class="navbar-brand">
+            <img src="images/meud.png" width="150px">
           </a>
 
           <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
@@ -43,14 +38,12 @@
           <div class="collapse navbar-collapse" id="nav-principal">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="" class="nav-link">Sobre nós</a>
+                <a href="sobre.php" class="nav-link">Sobre nós</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">Contato</a>
+                <a href="contato.php" class="nav-link">Contato</a>
               </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Atuação</a>
-              </li>
+
 
               <li class="nav-item divisor"></li>
 
@@ -77,20 +70,10 @@
             <section id="recursos" class="caixa">
                 <div class="row">
                   <div class="col-md-12">
-
-                    <h2>Lorem Ipsum</h2>
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <h3>Navegar</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
+                    <h2>Você está a poucos passos para ajudar diversas famílias</h2>
+                    <h3>Um pequeno gesto pode mudar vidas</h3>
+                    <h3>Doe móveis, eletrodomésticos em bom estado
+                    </h3>
                   </div>
                 </div>
             </section>
@@ -100,65 +83,28 @@
 
     <section id="servicos" class="caixa">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row albuns">
-              <div class="col-md-6">
-                <img src="images/family.jpg" class="img-fluid">
-              </div>
-              <div class="col-md-6">
-                <img src="images/family.jpg" class="img-fluid">
+          <div class="row">
+            <div class="col-sm-9">
+              <h2>Como ajudar?</h2>
+
+              <p>Caso tenha interesse em doar, basta clicar em <a href="cad_doador.html">Inscrever-se</a>.</p>
+              <p>Após fazer o cadastro, será redirecionado para o formulário de doação, após preencher o formulário, entraremos em contato para maiores informações!</p>
+
+              <div class="row">
+                <div class="col-8 col-sm-6">
+                  <h3>O que eu posso doar?</h3>
+                  <p>Roupas, móveis em bom estado, brinquedos, eletrodomésticos e muito mais.</p>
+                  <p>A coleta é feita por nossa equipe na data agendada. Entramos em contato para informar sobre a proximidade e imprevistos.</p>
+
+                  <h3>O que é feito com minha doação?</h3>
+                  <p>Todas as doações são enviadas para famílias necessitadas, caso tenha interesse em saber o processo de sua doação, entre em contato com nossa equipe para mais informações</p>
+                </div>
+                <div class="col-4 col-sm-6">
+                  <img src="images/fa4.png" width="200%">
+                </div>
               </div>
             </div>
-            <div class="row albuns">
-              <div class="col-md-6">
-                <img src="images/family.jpg" class="img-fluid">
-              </div>
-              <div class="col-md-6">
-                <img src="images/family.jpg" class="img-fluid">
-              </div>
-            </div>
           </div>
-          <div class="col-md-6">
-            
-            <h2>Lorem Ipsum</h2>
-
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="recursos" class="caixa">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-
-            <h2>Lorem Ipsum</h2>
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-
-            <h3>Navegar</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-
-          </div>
-          
-        </div>
       </div>
     </section>
 
@@ -166,22 +112,19 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="images/logo4.svg" width="142">
+            <img src="images/meud.png" width="142">
           </div>
           <div class="col-md-2">
             <h4>ONG</h4>
             <ul class="navbar-nav">
-              <li><a href="">Sobre</a></li>
-              <li><a href="">Contato</a></li>
+              <li><a href="sobre.php">Sobre</a></li>
+              <li><a href="contato.php">Contato</a></li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul>
               <li>
                 <a href=""><img src="images/facebook.png"></a>
-              </li>
-              <li>
-                <a href=""><img src="images/twitter.png"></a>
               </li>
               <li>
                 <a href=""><img src="images/instagram.png"></a>
@@ -192,7 +135,6 @@
       </div>
     </footer>
 
-    <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
