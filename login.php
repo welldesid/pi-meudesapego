@@ -24,7 +24,7 @@
         </div>
 
         <div>
-          <a href="cad_doador.html">Ainda não sou cliente</a>
+          <a href="cad_doador.html">Ainda não tenho cadastro!</a>
         </div>
       </form>
     </div>

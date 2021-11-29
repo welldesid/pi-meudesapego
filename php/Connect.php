@@ -3,18 +3,19 @@
 
 class ConexaoPDO {
 
-	private $host = 'localhost';
+	private $host = '127.0.0.1';
 	private $dbname = 'doacoesong';
 	private $user = 'root';
 	private $pass = '';
+	private $port = 3308;
 
 	public function conectar() {
 		try {
 
 			$conexao = new PDO(
-				"mysql:host=$this->host;dbname=$this->dbname",
+				"mysql:host=$this->host;port=$this->port;dbname=$this->dbname",
 				"$this->user",
-				"$this->pass"				
+				"$this->pass"
 			);
 			
 
@@ -28,13 +29,5 @@ class ConexaoPDO {
 			echo '<p>'.$e->getMessage().'</p>';
 		}
 	}
-
-
-
-
-
-
-
 }
-
 ?>
