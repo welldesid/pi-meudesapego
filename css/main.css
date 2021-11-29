@@ -230,8 +230,9 @@ h6 {
 .bg-blue {
   background: #2c6ed5;
 }
-.bg-blue-opacity {
-  background: #2c6dd5a6;
+.bg-img{
+  background: url(../images/fa6.png);
+
 }
 .bg-red { 
   background: rgba(255, 4, 4, 0.438);

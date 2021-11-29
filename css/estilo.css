@@ -5,8 +5,10 @@ html, body, #home {
 	overflow-x: hidden;
 }
 
+
 body {
-	background: url(../images/capa2.jpg);
+	background: url(../images/fa6.png);
+	/*background: url(../images/capa2.jpg);*/
 				/*url(../images/ruido.png),
 				linear-gradient(50deg,#ff4169,#7c26f8); */
 	background-attachment: fixed;
@@ -16,8 +18,8 @@ body {
 /* Barra de navegação
 -----------------------------*/
 nav.navbar-transparente {
-	padding: 15px 0px;
-	background: rgba(0,0,0,0.6);
+	padding: 5px 0px;
+	background: rgba(0,0,0,0.4);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -84,8 +86,19 @@ nav.navbar-transparente {
 	padding-bottom: 20px;
 }
 
+
+
 #servicos {
-	background: white;
+	background-color: white;
+	width: 100%;
+
+
+}
+
+p.hidden{
+	border-style: hidden;
+	margin-top: 15%;
+
 }
 
 #recursos {
@@ -93,15 +106,19 @@ nav.navbar-transparente {
 }
 
 #servicos h2, h3 {
-	color: #7c25f8;
+	color: black;
+}
+#servicos p{
+	font-size: 25px;
 }
 
 #recursos h2 {
 	color: white;
+
 }
 
 #recursos h3 {
-	color: #9bf0e1;
+	color: white;
 }
 
 .albuns {
@@ -167,6 +184,10 @@ h3 {
 	font-size: 2em;
 	font-weight: 700;
 	letter-spacing: -0.04em;
+}
+
+a {
+	text-decoration: none;
 }
 
 /* Formulários
