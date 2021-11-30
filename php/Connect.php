@@ -7,7 +7,7 @@ class ConexaoPDO {
 	private $dbname = 'doacoesong';
 	private $user = 'root';
 	private $pass = '';
-	private $port = 3306;
+	private $port = 3308;
 
 	public function conectar() {
 		try {

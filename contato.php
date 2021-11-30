@@ -20,6 +20,12 @@
   <body>
     
     <header><!-- inicio Cabeçalho -->
+      <!-- Menu de Acessibilidade -->
+      <?php 
+        require_once("menu-acessibilidade.php");
+      ?>
+      <!-- Fim menu de acessibilidade -->
+      
       <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
         <div class="container">
           
@@ -44,7 +50,7 @@
               <li class="nav-item divisor"></li>
 
               <li class="nav-item">
-                <a href="cad_doador.html" class="nav-link">Inscrever-se</a>
+                <a href="cad_doador.php" class="nav-link">Inscrever-se</a>
               </li>
               <li class="nav-item">
                 <a href="login.php" class="nav-link">Entrar</a>
@@ -105,6 +111,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- Início VLibras -->
+      <?php 
+        require_once("vlibras.php");
+      ?>
+    <!-- Fim VLibras -->
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

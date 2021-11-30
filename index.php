@@ -24,7 +24,13 @@
   <body>
     
     <header><!-- inicio Cabeçalho -->
-      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+      <!-- Menu de Acessibilidade -->
+      <?php 
+        require_once("menu-acessibilidade.php");
+      ?>
+      <!-- Fim menu de acessibilidade -->
+      
+      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente"  style="padding-top: 3%">
         <div class="container">
           
           <a href="index.php" class="navbar-brand">
@@ -48,7 +54,7 @@
               <li class="nav-item divisor"></li>
 
               <li class="nav-item">
-                <a href="cad_doador.html" class="nav-link">Inscrever-se</a>
+                <a href="cad_doador.php" class="nav-link">Inscrever-se</a>
               </li>
               <li class="nav-item">
                 <a href="login.php" class="nav-link">Entrar</a>
@@ -134,6 +140,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- Início VLibras -->
+      <?php 
+        require_once("vlibras.php");
+      ?>
+    <!-- Fim VLibras -->
 
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <title>Estilizando Formulários</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <!-- Estilo Customizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
   </head>
   <body>
-
-    <div id="container">
+    <header>
+      <!-- Menu de Acessibilidade -->
+      <?php 
+        require_once("menu-acessibilidade.php");
+      ?>
+      <!-- Fim menu de acessibilidade -->
+    </header>
+    <div id="container" style="padding-top: 2%">
       <img src="images/perfil.png">
 
       <form action="controllers/login-controller.php" method="post">
@@ -29,6 +38,10 @@
       </form>
     </div>
     
-
+    <!-- Início VLibras -->
+      <?php 
+        require_once("vlibras.php");
+      ?>
+    <!-- Fim VLibras -->
   </body>
 </html>
