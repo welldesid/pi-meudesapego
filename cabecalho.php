@@ -33,7 +33,12 @@
 
  	</head>
  	<body>
- 		<div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<!-- Início VLibras -->
+		<?php 
+		require_once("vlibras.php");
+		?>
+		<!-- Fim VLibras -->
+ 		<div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 					<a href="logado.php" class="navbar-brand">
@@ -56,6 +61,13 @@
 					}
 				?>
 			</div>
+		</div>
+		<div style="padding-top: 1%">
+			<!-- Menu de Acessibilidade -->
+			<?php 
+			require_once("menu-acessibilidade.php");
+			?>
+			<!-- Fim menu de acessibilidade -->
 		</div>
 		<div class="container">
 			<div class="principal">

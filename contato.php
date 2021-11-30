@@ -20,12 +20,6 @@
   <body>
     
     <header><!-- inicio Cabeçalho -->
-      <!-- Menu de Acessibilidade -->
-      <?php 
-        require_once("menu-acessibilidade.php");
-      ?>
-      <!-- Fim menu de acessibilidade -->
-      
       <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
         <div class="container">
           
@@ -61,8 +55,15 @@
         </div>
       </nav>
     </header><!--/fim Cabecalho -->
+    <div style="margin-top: 10.3%">
+      <!-- Menu de Acessibilidade -->
+      <?php 
+        require_once("menu-acessibilidade.php");
+      ?>
+      <!-- Fim menu de acessibilidade -->
+    </div>
 
-    <div> <!-- ######################### Espaçador ########################## -->
+    <div  style="margin-top: -10%"> <!-- ######################### Espaçador ########################## -->
       <p class="hidden"></p>
     </div>
  

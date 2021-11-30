@@ -24,6 +24,11 @@
  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
  	</head>
  	<body>
+		<!-- Início VLibras -->
+		<?php 
+		require_once("../vlibras.php");
+		?>
+		<!-- Fim VLibras -->
  		<div class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<div class="navbar-header">
@@ -34,7 +39,7 @@
 						<li><a href="../doacao-formulario.php" class="nav-link">Adicionar Doação</a></li>
 						<li><a href="../doacao-listagem.php" class="nav-link">Doações</a></li>
 						<li><a href="../formulario-categoria.php" class="nav-link">Categoria</a></li>
-						<li><a href="contato.php" class="nav-link">Contato</a></li>
+						<li><a href="../contato.php" class="nav-link">Contato</a></li>
 					</ul>
 				</div>
 				<?php  
@@ -45,6 +50,13 @@
 					}
 				?>
 			</div>
+		</div>
+		<div style="padding-top: 1%">
+			<!-- Menu de Acessibilidade -->
+			<?php 
+			require_once("../menu-acessibilidade.php");
+			?>
+			<!-- Fim menu de acessibilidade -->
 		</div>
 		<div class="container">
 			<div class="principal">

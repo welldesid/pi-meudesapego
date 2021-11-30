@@ -21,12 +21,6 @@
 <body>
 
     <header><!-- inicio Cabeçalho -->
-        <!-- Menu de Acessibilidade -->
-        <?php 
-        require_once("menu-acessibilidade.php");
-        ?>
-        <!-- Fim menu de acessibilidade -->
-
       <nav class="navbar navbar-expand-md navbar-light navbar-transparente">
         <div class="container">
           
@@ -62,9 +56,16 @@
         </div>
       </nav>
     </header><!--/fim Cabecalho -->
+    <div style="margin-top: 0.3%">
+      <!-- Menu de Acessibilidade -->
+      <?php 
+        require_once("menu-acessibilidade.php");
+      ?>
+      <!-- Fim menu de acessibilidade -->
+    </div>
 
 
-    <div class="page-wrapper bg-img p-t-100 p-b-50">
+    <div class="page-wrapper p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card2 card2-6">
                 <div class="card2-heading">

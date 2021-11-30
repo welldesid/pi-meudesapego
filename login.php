@@ -12,11 +12,13 @@
   </head>
   <body>
     <header>
-      <!-- Menu de Acessibilidade -->
-      <?php 
-        require_once("menu-acessibilidade.php");
-      ?>
-      <!-- Fim menu de acessibilidade -->
+      <div style="margin-top: 0.3%">
+        <!-- Menu de Acessibilidade -->
+        <?php 
+          require_once("menu-acessibilidade.php");
+        ?>
+        <!-- Fim menu de acessibilidade -->
+      </div>
     </header>
     <div id="container" style="padding-top: 2%">
       <img src="images/perfil.png">
