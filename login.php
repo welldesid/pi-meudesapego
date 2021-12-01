@@ -9,6 +9,9 @@
 
     <!-- Estilo Customizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <!-- CSS Alto Contraste - Acessibilidade -->
+    <link rel="stylesheet" type="text/css" href="css/altoContraste.css">
   </head>
   <body>
     <header>

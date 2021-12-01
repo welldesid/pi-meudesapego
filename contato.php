@@ -14,6 +14,9 @@
     <!-- Estilo customizado -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
+    <!-- CSS Alto Contraste - Acessibilidade -->
+    <link rel="stylesheet" type="text/css" href="css/altoContraste.css">
+
     <title>Meu Desapego</title>
     <link rel="icon" href="images/logofav.png">
   </head>

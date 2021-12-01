@@ -16,6 +16,9 @@
     <!-- Referência arquivos externos-->
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <!-- CSS Alto Contraste - Acessibilidade -->
+    <link rel="stylesheet" type="text/css" href="css/altoContraste.css">
 </head>
 
 <body>

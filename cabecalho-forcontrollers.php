@@ -22,6 +22,9 @@
  		<link rel="stylesheet" type="text/css" href="../css/categoria.css">
  		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+ 		<!-- CSS Alto Contraste - Acessibilidade -->
+    	<link rel="stylesheet" type="text/css" href="css/altoContraste.css">
  	</head>
  	<body>
 		<!-- Início VLibras -->
