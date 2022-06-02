@@ -75,6 +75,43 @@
 									</select>
 								</div>
 							</div>
+							<!-- Dados do doador - início -->
+							<div class="row">
+								<div class="col-md-11">
+									<div class="card">
+										<div class="card-header">Dados do Doador</div>
+										<div class="card-body">
+											<div class="row g-3">
+												<div class="col-md-12">
+													<label class="form-label">Nome:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+												<div class="col-md-12">
+													<label class="form-label">Telefone:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+												<div class="col-md-8">
+													<label class="form-label">Rua:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+												<div class="col-md-4">
+													<label class="form-label">Número:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Bairro:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Cidade:</label>
+													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Dados do doador - fim -->
 							<br>
 						 	<div class="col-auto">
 						 		<button type="submit" class="btn btn-primary btn-lg">Alterar</button>

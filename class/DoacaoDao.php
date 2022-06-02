@@ -23,7 +23,7 @@ class DoacaoDao
 	function listaDoacoes()
 	{
 		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria");
+		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status");
 		//var_dump($resultado);
 		while ($doacao_array = mysqli_fetch_assoc($resultado)){
 			$categoria = new Categoria('');
