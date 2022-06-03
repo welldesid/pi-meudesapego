@@ -43,6 +43,28 @@ class DoacaoDao
 		return $doacoes;
 	}
 
+	function pesquisaDoacao($pesquisa=''){
+		$doacoes = array();
+		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa' or descricao like '%$pesquisa' or status like '%$pesquisa' or c.nome like '%$pesquisa' order by status != 'Disponível', status");
+
+		while ($doacao_array = mysqli_fetch_assoc($resultado)){
+			$categoria = new Categoria('');
+			$categoria->setNome($doacao_array['nome']);
+
+			$titulo = $doacao_array['titulo'];
+			$descricao = $doacao_array['descricao'];
+			$foto = $doacao_array['foto'];
+			$status = $doacao_array['status'];
+
+			$doacao = new Doacao($titulo, $descricao, $foto, $status, '', '', $categoria,'');
+
+			$doacao->setId($doacao_array['iddoacao']);
+
+			array_push($doacoes, $doacao);
+		}
+		return $doacoes;
+	}
+
 	function buscaDoacao($iddoacao)
 	{
 		$query = "select * from doacao where iddoacao = {$iddoacao}";
