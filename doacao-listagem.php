@@ -6,20 +6,29 @@
 				    $doacaoDao = new DoacaoDao($conexao);
 					$doacoes = $doacaoDao->listaDoacoes();
 
-					$buscadoacao = $doacaoDao->pesquisaDoacao();
+					if ($_POST) {
+						$pesquisa = $_POST['pesquisa'];
+						$buscadoacao = $doacaoDao->pesquisaDoacao($pesquisa);
+					} else {
+						$buscadoacao = $doacaoDao->pesquisaDoacao();
+					}
+
 				?>
 				<div class="card" id="carddoacao">
 				 	<div class="card-header">
 				 		Gerenciar Doação
 				 	</div>
 				 	<div class="card-body">
-				 		<form method="post" action="controllers/busca-doacao.php">
+				 		<form method="post" action="">
 				 			<div class="container">
 				 				<div class="row justify-content-end">
 				 					<div class="col-md-4">
 						 				<div class="input-group">
 							 				<input type="text" name="pesquisa" class="form-control" placeholder="Digite aqui a sua busca" aria-describedby="pesquisa" aria-label="Digite aqui a sua busca">
 							 				<button class="btn btn-outline-secondary" type="submit" id="btnbuscar"><i class="bi bi-search"> Buscar</i></button>
+								 		</div>
+								 		<div align="right">
+								 			<a href="doacao-listagem.php">Limpar Busca</a>
 								 		</div>
 						 			</div>
 				 				</div>
@@ -46,12 +55,12 @@
 			 					endforeach;
 			 				?>
 							</div>
-				 			<br>
+				 			<!--<br>
 				 			<br>
 				 			<br>
 				 			<div class="row">
 					 		<?php
-				 				foreach ($doacoes as $doacao):
+				 				/*foreach ($doacoes as $doacao):
 				 			?>
 								<div class="col-md-3 col-xs-12 g-4">
 						    		<div class="card h-100">
@@ -66,9 +75,9 @@
 						    		</div>
 						  		</div>
 							<?php
-			 					endforeach;
+			 					endforeach;*/
 			 				?>
-							</div>
+							</div>-->
 				 		</div>
 					</div>
 					<br>

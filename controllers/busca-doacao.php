@@ -8,5 +8,6 @@
 	$doacaoDao = new DoacaoDao($conexao);
 
 	$doacaoDao->pesquisaDoacao($pesquisa);
-	
+
+	//print_r($doacaoDao->pesquisaDoacao($pesquisa));
  ?>
