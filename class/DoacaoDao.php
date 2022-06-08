@@ -23,9 +23,40 @@ class DoacaoDao
 	function listaDoacoes()
 	{
 		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status");
+		$consulta = "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status";
+		$resultado = mysqli_query($this->conexao, $consulta);
 		//var_dump($resultado);
-		while ($doacao_array = mysqli_fetch_assoc($resultado)){
+
+
+		/** INÍCIO PAGINAÇÃO **/
+		$total_reg = "4"; //número de registros por página
+		$pagina = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
+
+		if (!$pagina) {
+			$pc = "1";
+		} else {
+			$pc = $pagina;
+		}
+		
+		//Determina o valor inicial das buscas limitadas
+		$inicio = $pc -1;
+		$inicio = $inicio * $total_reg;
+
+		//Seleciona os dados e exibe a paginação
+		$limite = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status LIMIT $inicio, $total_reg");
+		$todos = mysqli_query($this->conexao, $consulta);
+
+		$tr = mysqli_num_rows($todos); //verifica o numero total de registros
+		$tp = $tr / $total_reg; //verifica o número total de páginas
+
+
+		$_SESSION['pc'] = $pc;
+		$_SESSION['tp'] = $tp;
+		/** FIM PAGINAÇÃO **/
+
+
+
+		while ($doacao_array = mysqli_fetch_assoc($limite)){
 			$categoria = new Categoria('');
 			$categoria->setNome($doacao_array['nome']);
 
@@ -40,6 +71,9 @@ class DoacaoDao
 
 			array_push($doacoes, $doacao);
 		}
+
+		
+
 		return $doacoes;
 	}
 

@@ -55,12 +55,14 @@
 			 					endforeach;
 			 				?>
 							</div>
-				 			<!--<br>
 				 			<br>
+				 			<br>
+				 			DIVISÃO TEMPORÁRIA
 				 			<br>
 				 			<div class="row">
 					 		<?php
-				 				/*foreach ($doacoes as $doacao):
+				 				foreach ($doacoes as $doacao):
+				 				//while($doacao = mysqli_fetch_array($doacoes))
 				 			?>
 								<div class="col-md-3 col-xs-12 g-4">
 						    		<div class="card h-100">
@@ -75,25 +77,46 @@
 						    		</div>
 						  		</div>
 							<?php
-			 					endforeach;*/
+			 					endforeach;
+								//}
 			 				?>
-							</div>-->
+							</div>
 				 		</div>
 					</div>
 					<br>
 					<br>
 					<hr>
 					<!-- PAGINAÇÃO -->
+					<?php 
+						$pc = $_SESSION['pc'];
+						$tp = $_SESSION['tp'];
+
+						$anterior = $pc -1;
+						$proximo = $pc +1;
+					?>
+
 				 	<nav aria-label="Page navigation example">
 					  <ul class="pagination justify-content-center">
 					    <li class="page-item disabled">
-					      <a class="page-link">Anterior</a>
+					    <?php 
+					    	if ($pc>1) {
+					    ?>
+					      <a href="?pagina=<?= $anterior ?>" class="page-link">Anterior</a>
+					    <?php 
+					     	}
+					    ?>
 					    </li>
 					    <li class="page-item active"><a class="page-link" href="#">1</a></li>
 					    <li class="page-item"><a class="page-link" href="#">2</a></li>
 					    <li class="page-item"><a class="page-link" href="#">3</a></li>
 					    <li class="page-item">
-					      <a class="page-link" href="#">Próximo</a>
+					    <?php 
+					    	if ($pc<$tp) {
+					    ?>
+					      <a href="?pagina=<?= $proximo ?>" class="page-link" href="#">Próximo</a>
+					    <?php 
+					    	}
+					    ?>
 					    </li>
 					  </ul>
 					</nav>
