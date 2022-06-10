@@ -43,7 +43,7 @@ class DoacaoDao
 		$inicio = $inicio * $total_reg;
 
 		//Seleciona os dados e exibe a paginação
-		$limite = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status LIMIT $inicio, $total_reg");
+		$limite = mysqli_query($this->conexao, "select * from doacao as d left join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status LIMIT $inicio, $total_reg");
 		$todos = mysqli_query($this->conexao, $consulta);
 
 		$tr = mysqli_num_rows($todos); //verifica o numero total de registros
