@@ -20,6 +20,18 @@
 				#foto{
 					width: 50%;
 				}
+
+				div.some {
+					display: none;
+				}
+				div.some.mostrar {
+					display: block;
+				}
+
+				.link{
+					text-decoration: underline;
+					color: blue;
+				}
 			</style>
 				<div class="card" id="carddoacao">
 				 	<div class="card-header">
@@ -76,39 +88,52 @@
 								</div>
 							</div>
 							<!-- Dados do doador - início -->
-							<div class="row">
-								<div class="col-md-11">
-									<div class="card">
-										<div class="card-header">Dados do Doador</div>
-										<div class="card-body">
-											<div class="row g-3">
-												<div class="col-md-12">
-													<label class="form-label">Nome:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
-												</div>
-												<div class="col-md-12">
-													<label class="form-label">Telefone:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
-												</div>
-												<div class="col-md-8">
-													<label class="form-label">Rua:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
-												</div>
-												<div class="col-md-4">
-													<label class="form-label">Número:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Bairro:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Cidade:</label>
-													<input type="text" class="form-control" value="<?= $doacao->getTitulo(); ?>" readonly>
+							<?php 
+								$doador = $_SESSION['doador'];
+								$telefone = $_SESSION['telefone'];
+								$numero = $_SESSION['numero'];
+								$rua = $_SESSION['rua'];
+								$bairro = $_SESSION['bairro'];
+								$cidade = $_SESSION['cidade'];
+							?>
+							<div class="conteudo">
+								<span class="link">Clique aqui para ver os dados do doador</span>
+								<div class="some">
+								<div class="row">
+									<div class="col-md-11">
+										<div class="card">
+											<div class="card-header">Dados do Doador</div>
+											<div class="card-body">
+												<div class="row g-3">
+													<div class="col-md-12">
+														<label class="form-label">Nome:</label>
+														<input type="text" class="form-control" value="<?= $doador; ?>" readonly>
+													</div>
+													<div class="col-md-12">
+														<label class="form-label">Telefone:</label>
+														<input type="text" class="form-control" value="<?= $telefone; ?>" readonly>
+													</div>
+													<div class="col-md-8">
+														<label class="form-label">Rua:</label>
+														<input type="text" class="form-control" value="<?= $rua; ?>" readonly>
+													</div>
+													<div class="col-md-4">
+														<label class="form-label">Número:</label>
+														<input type="text" class="form-control" value="<?= $numero; ?>" readonly>
+													</div>
+													<div class="col-md-6">
+														<label class="form-label">Bairro:</label>
+														<input type="text" class="form-control" value="<?= $bairro; ?>" readonly>
+													</div>
+													<div class="col-md-6">
+														<label class="form-label">Cidade:</label>
+														<input type="text" class="form-control" value="<?= $cidade; ?>" readonly>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 								</div>
 							</div>
 							<!-- Dados do doador - fim -->
@@ -117,4 +142,11 @@
 						 		<button type="submit" class="btn btn-primary btn-lg">Alterar</button>
 						 	</div>
 						</form>
+						<script type="text/javascript">
+							document.addEventListener('click', (e) => {
+							  if (e.target.tagName.toLowerCase() === 'span' && e.target.parentNode.classList.contains('conteudo')) {
+							    e.target.nextElementSibling.classList.toggle('mostrar');
+							  }
+							});
+						</script>
 					<?php require_once("rodape.php"); ?>
