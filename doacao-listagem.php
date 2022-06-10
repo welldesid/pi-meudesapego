@@ -4,13 +4,12 @@
 					verificaNivelAcesso();
 
 				    $doacaoDao = new DoacaoDao($conexao);
-					$doacoes = $doacaoDao->listaDoacoes();
 
 					if ($_POST) {
 						$pesquisa = $_POST['pesquisa'];
-						$buscadoacao = $doacaoDao->pesquisaDoacao($pesquisa);
+						$buscadoacao = $doacaoDao->listaDoacoes($pesquisa);
 					} else {
-						$buscadoacao = $doacaoDao->pesquisaDoacao();
+						$buscadoacao = $doacaoDao->listaDoacoes();
 					}
 
 				?>
@@ -53,32 +52,6 @@
 						  		</div>
 							<?php
 			 					endforeach;
-			 				?>
-							</div>
-				 			<br>
-				 			<br>
-				 			DIVISÃO TEMPORÁRIA
-				 			<br>
-				 			<div class="row">
-					 		<?php
-				 				foreach ($doacoes as $doacao):
-				 				//while($doacao = mysqli_fetch_array($doacoes))
-				 			?>
-								<div class="col-md-3 col-xs-12 g-4">
-						    		<div class="card h-100">
-						    			<img src="uploads/<?= $doacao->getFoto()?>" class="card-img-top img-fluid" alt="Foto Doação">
-						      			<div class="card-body">
-						        			<h5 class="card-title"><?= $doacao->getTitulo(); ?></h5>
-						        			<p class="card-text">Status: <?= $doacao->getStatus(); ?></p>
-						     			</div>
-						     			<div class="card-footer">
-						      				<a href="doacao-altera-formulario.php?iddoacao=<?= $doacao->getId(); ?>" class="btn btn-primary">Gerenciar</a>
-						      			</div>
-						    		</div>
-						  		</div>
-							<?php
-			 					endforeach;
-								//}
 			 				?>
 							</div>
 				 		</div>

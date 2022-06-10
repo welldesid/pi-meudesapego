@@ -20,10 +20,11 @@ class DoacaoDao
 		return mysqli_query($this->conexao, $query);
 	} //$doacao->getDoador()->getId() / $doacao->getOng()->getId()
 
-	function listaDoacoes()
+
+	function listaDoacoes($pesquisa='')
 	{
 		$doacoes = array();
-		$consulta = "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status";
+		$consulta = "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status";
 		$resultado = mysqli_query($this->conexao, $consulta);
 		//var_dump($resultado);
 
@@ -43,7 +44,7 @@ class DoacaoDao
 		$inicio = $inicio * $total_reg;
 
 		//Seleciona os dados e exibe a paginação
-		$limite = mysqli_query($this->conexao, "select * from doacao as d left join categoria as c on c.idcategoria = d.idcategoria order by status != 'Disponível', status LIMIT $inicio, $total_reg");
+		$limite = mysqli_query($this->conexao, "select * from doacao as d left join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status LIMIT $inicio, $total_reg");
 		$todos = mysqli_query($this->conexao, $consulta);
 
 		$tr = mysqli_num_rows($todos); //verifica o numero total de registros
@@ -72,33 +73,12 @@ class DoacaoDao
 			array_push($doacoes, $doacao);
 		}
 
-		
 
 		return $doacoes;
 	}
 
-	function pesquisaDoacao($pesquisa=''){
-		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status");
 
-		while ($doacao_array = mysqli_fetch_assoc($resultado)){
-			$categoria = new Categoria('');
-			$categoria->setNome($doacao_array['nome']);
-
-			$titulo = $doacao_array['titulo'];
-			$descricao = $doacao_array['descricao'];
-			$foto = $doacao_array['foto'];
-			$status = $doacao_array['status'];
-
-			$doacao = new Doacao($titulo, $descricao, $foto, $status, '', '', $categoria,'');
-
-			$doacao->setId($doacao_array['iddoacao']);
-
-			array_push($doacoes, $doacao);
-		}
-		return $doacoes;
-	}
-
+	/*Função responsável por encontrar item a ser editado*/
 	function buscaDoacao($iddoacao)
 	{
 		$query = "select * from doacao where iddoacao = {$iddoacao}";
@@ -109,13 +89,6 @@ class DoacaoDao
 
 		$categoria = new Categoria('');
 		$categoria->setId($doacao_buscada['idcategoria']);
-
-		/* 
-		Doador		
-
-		$doador = new Doador();
-		$doador->setId($doacao_buscada['iddoador']);
-		*/
 	
 		$titulo = $doacao_buscada['titulo'];
 		$descricao = $doacao_buscada['descricao'];
