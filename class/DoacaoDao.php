@@ -79,7 +79,7 @@ class DoacaoDao
 
 	function pesquisaDoacao($pesquisa=''){
 		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa' or descricao like '%$pesquisa' or status like '%$pesquisa' or c.nome like '%$pesquisa' order by status != 'Disponível', status");
+		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status");
 
 		while ($doacao_array = mysqli_fetch_assoc($resultado)){
 			$categoria = new Categoria('');
