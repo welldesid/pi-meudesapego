@@ -97,27 +97,45 @@
 
 				 	<nav aria-label="Page navigation example">
 					  <ul class="pagination justify-content-center">
-					    <li class="page-item disabled">
 					    <?php 
-					    	if ($pc>1) {
+					    	if ($pc>=2) {
 					    ?>
-					      <a href="?pagina=<?= $anterior ?>" class="page-link">Anterior</a>
-					    <?php 
-					     	}
-					    ?>
-					    </li>
-					    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-					    <li class="page-item"><a class="page-link" href="#">2</a></li>
-					    <li class="page-item"><a class="page-link" href="#">3</a></li>
 					    <li class="page-item">
+					      <a href="?pagina=<?= $anterior ?>" class="page-link">Anterior</a>
+					    </li>
+					    <?php 
+					     	} else {
+					    ?>
+					    <li class="page-item disabled">
+					      <a href="#" class="page-link">Anterior</a>
+					    </li>
+					    <?php 
+					    	}
+					     ?>
+					     <?php 
+					     	if ($tp >= 1) {
+					     		for ($i=1; $i <= $tp; $i++) { 
+					    ?>
+					    			<li class="page-item"><a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a></li>
+					    <?php
+					     		}
+					     	}
+					     ?>
 					    <?php 
 					    	if ($pc<$tp) {
 					    ?>
-					      <a href="?pagina=<?= $proximo ?>" class="page-link" href="#">Próximo</a>
+					    <li class="page-item">
+					      <a href="?pagina=<?= $proximo ?>" class="page-link">Próximo</a>
+					    </li>
+					    <?php 
+					    	} else {
+					    ?>
+					    <li class="page-item disabled">
+					      <a href="#" class="page-link">Próximo</a>
+					    </li>
 					    <?php 
 					    	}
 					    ?>
-					    </li>
 					  </ul>
 					</nav>
 					<?php require_once("rodape.php"); ?>
