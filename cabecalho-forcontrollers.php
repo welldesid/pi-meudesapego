@@ -48,7 +48,7 @@
 				<?php  
 					if (usuarioEstaLogado()) {
 				?>
-					<a href="controllers/logout.php">Sair</a>
+					<a href="logout.php">Sair</a>
 				<?php
 					}
 				?>

@@ -11,6 +11,7 @@
 		$usuario_buscado = mysqli_fetch_assoc($resultado);
 
 		$_SESSION['idnivel'] = $usuario_buscado['idnivel'];
+		$_SESSION['iddoador'] = $usuario_buscado['iddoador'];
 		
 		return $usuario_buscado;
 	}

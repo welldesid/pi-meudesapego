@@ -81,7 +81,7 @@ class DoacaoDao
 	/*Função responsável por encontrar item a ser editado*/
 	function buscaDoacao($iddoacao)
 	{
-		$query = "select * from doacao d left join doador xd on xd.iddoador = d.iddoador join doador_has_telefone dht on xd.iddoador = dht.iddoador join telefone t on dht.idtelefone = t.idtelefone join endereco en on xd.idendereco = en.idendereco join rua r on en.idrua = r.idrua join bairro b on en.idbairro = b.idbairro join cidade ci on en.idcidade = ci.idcidade where iddoacao = {$iddoacao}";
+		$query = "select * from doacao d left join doador xd on xd.iddoador = d.iddoador left join doador_has_telefone dht on xd.iddoador = dht.iddoador left join telefone t on dht.idtelefone = t.idtelefone left join endereco en on xd.idendereco = en.idendereco left join rua r on en.idrua = r.idrua left join bairro b on en.idbairro = b.idbairro left join cidade ci on en.idcidade = ci.idcidade where iddoacao = {$iddoacao}";
 
 		$resultado = mysqli_query($this->conexao, $query);
 
@@ -97,6 +97,7 @@ class DoacaoDao
 		$dt_doacao = $doacao_buscada['dt_doacao'];
 		$iddoador = $doacao_buscada['iddoador'];
 		$idong = $doacao_buscada['idong'];
+
 		$doador = $doacao_buscada['nome_completo'];
 		$telefone = $doacao_buscada['telefone'];
 		$numero = $doacao_buscada['numero'];
@@ -110,6 +111,7 @@ class DoacaoDao
 		$_SESSION['rua'] = $rua;
 		$_SESSION['bairro'] = $bairro;
 		$_SESSION['cidade'] = $cidade;
+		$_SESSION['iddoador'] = $iddoador;
 
 		$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, $categoria, $idong);
 		$doacao->setId($doacao_buscada['iddoacao']);

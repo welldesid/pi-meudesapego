@@ -1,20 +1,15 @@
 <?php 
 	require_once("../cabecalho-forcontrollers.php");
 		
-	//verificaUsuario();
-	//
 	$categoria = new Categoria('');
 	$categoria->setId($_POST["idcategoria"]);
-	//
-	//$doador = new Doador();
-	//$doador->setId($POST["iddoador"]);
 	
 	$titulo = $_POST["titulo"];
 	$descricao = $_POST["descricao"];
 	$foto = $_FILES["foto"];
 	$status = "Disponível"; //O Status inicial é o "Disponível"
 	$dt_doacao = ''; //Função de data agora
-	$doador = 1; //Pegar o id de quem está logado no momento
+	$doador = $_POST["iddoador"]; //Pegar o id de quem está logado no momento
 	$ong = 1; //Fixar por enquanto o id da ONG
 
 	// Se a foto estiver sido selecionada

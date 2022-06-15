@@ -9,7 +9,7 @@ class Doacao{
 	private $foto;
 	private $status;
 	private $dt_doacao;
-	private $doador;
+	private $iddoador;
 	private $categoria;
 	private $ong;
 
@@ -17,13 +17,13 @@ class Doacao{
 	Doador, Categoria e ONG são passados de maneira diferente, pois são um objeto da Classe Doador, Categoria e ONG (respectivamente), então preciso instanciá-lo para passar como parâmetro.
 	*/
 	/*Aguardar as outras classes ficarem prontas para adcioná-las da menira correta: Doador $doador, Categoria $categoria, Ong $ong*/
-	function __construct($titulo, $descricao, $foto, $status, $dt_doacao, $doador, Categoria $categoria, $ong){
+	function __construct($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, Categoria $categoria, $ong){
 		$this->titulo = $titulo;
 		$this->descricao = $descricao;
 		$this->foto = $foto;
 		$this->status = $status;
 		$this->dt_doacao = $dt_doacao;
-		$this->doador = $doador;
+		$this->iddoador = $iddoador;
 		$this->categoria = $categoria;
 		$this->ong = $ong;
 	}
@@ -64,7 +64,7 @@ class Doacao{
 
 	public function getDoador()
 	{
-		return $this->doador;
+		return $this->iddoador;
 	}
 
 	public function getCategoria()

@@ -87,7 +87,7 @@
 					     ?>
 					     <?php 
 					     	if ($tp >= 1) {
-					     		for ($i=1; $i <= $tp; $i++) { 
+					     		for ($i=1; $i < $tp+1; $i++) { 
 					    ?>
 					    			<li class="page-item"><a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a></li>
 					    <?php

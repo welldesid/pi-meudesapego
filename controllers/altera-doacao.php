@@ -11,12 +11,12 @@
 	$foto = $_POST["foto"];
 	$status = $_POST["status"];
 	$dt_doacao = ''; //Função de data agora
-	$doador = 1; //Pegar o id de quem está logado no momento
-	$ong = 1; //Fixar por enquanto o id da ONG
+	$iddoador = $_POST["iddoador"];
+	$idong = 1; //Fixar por enquanto o id da ONG
 
 	//var_dump($status);
 
-	$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $doador, $categoria, $ong);
+	$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, $categoria, $idong);
 	$doacao->setId($_POST['iddoacao']);
 
 	$doacaoDao = new DoacaoDao($conexao);

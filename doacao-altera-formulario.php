@@ -95,6 +95,7 @@
 								$rua = $_SESSION['rua'];
 								$bairro = $_SESSION['bairro'];
 								$cidade = $_SESSION['cidade'];
+								$iddoador = $_SESSION['iddoador'];
 							?>
 							<div class="conteudo">
 								<span class="link">Clique aqui para ver os dados do doador</span>
@@ -104,6 +105,7 @@
 										<div class="card">
 											<div class="card-header">Dados do Doador</div>
 											<div class="card-body">
+												<input type="hidden" name="iddoador" value="<?= $iddoador; ?>">
 												<div class="row g-3">
 													<div class="col-md-12">
 														<label class="form-label">Nome:</label>
