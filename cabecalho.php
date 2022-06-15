@@ -47,12 +47,25 @@
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="nav navbar-nav">
-						<li><a href="doacao-formulario.php" class="nav-link">Adicionar Doação</a></li>
-						<li><a href="doacao-listagem.php" class="nav-link">Doações</a></li>
-						<li><a href="formulario-categoria.php" class="nav-link">Categoria</a></li>
-						<li><a href="contato.php" class="nav-link">Contato</a></li>
-					</ul>
+					<?php 
+						if (recebeNivel() == 2 or recebeNivel() == 1) {
+					?>
+						<ul class="nav navbar-nav">
+							<li><a href="doacao-formulario.php" class="nav-link">Adicionar Doação</a></li>
+							<li><a href="doacao-listagem.php" class="nav-link">Doações</a></li>
+							<li><a href="formulario-categoria.php" class="nav-link">Categoria</a></li>
+							<li><a href="contato.php" class="nav-link">Contato</a></li>
+						</ul>
+					<?php
+						} else {
+					?>
+						<ul class="nav navbar-nav">
+							<li><a href="doacao-formulario.php" class="nav-link">Adicionar Doação</a></li>
+							<li><a href="contato.php" class="nav-link">Contato</a></li>
+						</ul>
+					<?php
+						}
+					?>
 				</div>
 				<?php  
 					if (usuarioEstaLogado()) {
