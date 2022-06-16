@@ -18,7 +18,7 @@ class DoacaoDao
 		$query = "insert into doacao (titulo, descricao, foto, status, dt_doacao, iddoador, idcategoria, idong) values ('{$doacao->getTitulo()}', '{$doacao->getDescricao()}', '{$doacao->getFoto()}', '{$doacao->getStatus()}', NOW(), {$doacao->getDoador()}, {$doacao->getCategoria()->getId()}, {$doacao->getOng()})";
 
 		return mysqli_query($this->conexao, $query);
-	} //$doacao->getDoador()->getId() / $doacao->getOng()->getId()
+	}
 
 
 	function listaDoacoes($pesquisa='')
