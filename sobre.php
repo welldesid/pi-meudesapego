@@ -76,9 +76,9 @@
 
     <section id="servicos" class="caixa">
       <div class="container">
-              <div class="row">
-                <div class="col-8 col-sm-6">
-                  <h2>Sobre nós</h2>
+
+            <div>
+              <h2>Sobre nós</h2>
 
                   <p>Somos uma Associação de Assistência Integral à famílias carentes de nossa cidade.</p>
                   <p>Estamos ha cinco anos atuando na área, dando suporte e acolhimento psicossocial</p>
@@ -90,14 +90,9 @@
                   <p>Projeto Mulher Rendeira, com aulas de bordado do nordeste;</p>
                   <p>Montagem de brinquedos para renda familiar.</p>
 
-                  
+                  <img src="images/fam2.jpg" alt="Family" style="max-width:100%;height:auto;">
+            </div>
 
-
-                </div>
-                <div class="col-4 col-sm-6">
-                  <img src="images/fam2.jpg" width="">
-                </div>
-              </div>
       </div>
     </section>
 

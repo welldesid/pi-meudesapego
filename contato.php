@@ -73,19 +73,14 @@
 
     <section id="servicos" class="caixa">
       <div class="container">
-              <div class="row">
-                <div class="col-8 col-sm-6">
                   <h2>Contato</h2>
 
                   <p>Para mais informações sobre nossa ONG, entre em contato através das redes sociais<a href="https://www.facebook.com"> Facebook</a> e <a href="https://www.instagram.com"> Instagram</a>, ou através dos nosso telefone: <a href=""> (11)99999-8888</a> </p>
                   
 
 
-                </div>
-                <div class="col-4 col-sm-6">
-                  <img src="images/call.jpg" width="">
-                </div>
-              </div>
+
+                  <img src="images/call.jpg" style="max-width:100%;height:auto;">
       </div>
     </section>
 
