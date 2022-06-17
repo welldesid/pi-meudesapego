@@ -27,7 +27,7 @@
         <div class="container">
           
           <a href="index.php" class="navbar-brand">
-            <img src="images/meud.png" width="150px">
+            <img src="images/meud.png" width="100px">
           </a>
 
           <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
@@ -93,7 +93,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="images/meud.png" width="142">
+            <img src="images/meud.png" width="100">
           </div>
           <div class="col-md-2">
             <h4>ONG</h4>
