@@ -29,13 +29,14 @@
         </div>
 
 
-        <div class="clearfix">
-            <!-- FUNÇÃO "ESQUECEU A SENHA" e "LEMBRAR-ME" DEIXEI DESABILITADO POIS AINDA NÃO TEMOS ESSA FUNÇÃO NO BACKEND -->
+<!-- FUNÇÃO "ESQUECEU A SENHA" e "LEMBRAR-ME" DEIXEI DESABILITADO POIS AINDA NÃO TEMOS ESSA FUNÇÃO NO BACKEND -->
+       <!-- <div class="clearfix">
 
 
-            <!--<label class="float-left form-check-label"><input type="checkbox"> Lembrar-me</label>
-            <a href="#" class="float-right">Esqueceu a senha?</a> -->
-        </div>        
+
+            <label class="float-left form-check-label"><input type="checkbox"> Lembrar-me</label>
+            <a href="#" class="float-right">Esqueceu a senha?</a>
+        </div> -->       
     </form>
     <a href="cad_doadorv2.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Quero me cadastrar!</a>
     <a href="index.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Voltar à página inicial</a>
