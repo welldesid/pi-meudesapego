@@ -83,7 +83,8 @@
 
 
         <div class="clearfix">
-            <label class="float-left form-check-label"><input id="checktermos" required type="checkbox"> Aceito os <a href="SELECIONARARQUIVODETERMOS">Termos de Serviço </a></label> 
+            <label class="float-left form-check-label">
+            <input id="field_terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Necessário aceitar os Termos de Serviço' : '');" type="checkbox"> Aceito os <a href="termos.php" target="_blank">Termos de Uso </a></label>
         </div><p> 
 
 
