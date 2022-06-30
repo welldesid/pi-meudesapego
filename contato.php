@@ -8,6 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -75,7 +79,13 @@
       <div class="container">
                   <h2>Contato</h2>
 
-                  <p>Para mais informações sobre nossa ONG, entre em contato através das redes sociais<a href="https://www.facebook.com"> Facebook</a> e <a href="https://www.instagram.com"> Instagram</a>, ou através dos nosso telefone: <a href=""> (11)99999-8888</a> </p>
+                  <p>Para mais informações sobre nossa ONG, entre em contato através das redes sociais:
+                    <ul style="list-style-type:none;">
+                      <li><i class="bi bi-facebook"></i> <a href="https://www.facebook.com/tg417/"> Facebook</a></li>
+                      <li><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/tg_4.17/"> Instagram</a></li>
+                      <li><i class="bi bi-envelope"></i> <a href="mailto:associacaotg4.17@gmail.com">associacaotg4.17@gmail.com</a></li>
+                      <li><i class="bi bi-telephone-fill"></i> <a href="tel:+5511996204330"> (11)99620-4330</a></li> </p>
+
                   
 
 
