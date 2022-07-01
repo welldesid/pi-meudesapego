@@ -11,14 +11,18 @@
 <link rel="stylesheet" type="text/css" href="css/cad.css"> <!-- REFERENCIANDO ARQUIVO LOCALIZADO css/cad.css STYLE CONTROL -->
 <script src="./js/main.js" type='module' defer></script> <!-- API VIACEP -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
 
+  document.getElementById("termosdeuso").setCustomValidity("Necessário aceitar os Termos de Uso");
+
+</script>
 </head>
 
 <body>
 
 
 <div class="cad-form">
-    <form action="doador_controller.php?acao=inserir" method="post">
+    <form method="post" action="doador_controller.php?acao=inserir">
         <h2 class="text-center">Registrar-se</h2>   
         <div class="form-group">
             <label for="nomecompleto">Nome Completo</label>
@@ -27,7 +31,7 @@
         </div>  
 
         <div class="form-group">
-            <label for="datanascimento">Data de Nascimento</label>
+            <label for="datanasc">Data de Nascimento</label>
             <input type="date" name="datanasc" class="form-control" id="datanasc" aria-describedby="datanascimentoAjuda">
             <small id="nomeAjuda" class="form-text text-muted">Selecione uma data válida</small>
         </div> 
@@ -76,7 +80,13 @@
         </div> 
 
         <div class="form-group">
-            <label for="cidade">Senha</label>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailAjuda">
+            <small id="emailAjuda" class="form-text text-muted">Digite um e-mail válido Exemplo: seuemail@email.com</small>
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha</label>
             <input type="password" name="senha" class="form-control" id="senha" aria-describedby="senhaAjuda">
             <small id="senhaAjuda" class="form-text text-muted">Digite uma senha válida para autenticação</small>
         </div> 
@@ -84,7 +94,7 @@
 
         <div class="clearfix">
             <label class="float-left form-check-label">
-            <input id="field_terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Necessário aceitar os Termos de Serviço' : '');" type="checkbox"> Aceito os <a href="termos.php" target="_blank">Termos de Uso </a></label>
+            <input id="termosdeuso" onchange="this.setCustomValidity(validity.valueMissing ? 'Necessário aceitar os Termos de Uso' : '');" type="checkbox" required name="termos"> Aceito os <a href="termos.php" target="_blank">Termos de Uso </a></label>
         </div><p> 
 
 
