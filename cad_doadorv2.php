@@ -1,7 +1,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Entrar</title>
+<title>Registrar-se</title>
 <link rel="icon" href="images/meudesapego.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -103,7 +103,7 @@
         </div>
 
     </form>
-    <a href="loginv2.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Já é cadastrado? Clique aqui!</a>
+    <a href="login.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Já é cadastrado? Clique aqui!</a>
     <a href="index.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Voltar à página inicial</a>
 </div>
 </body>
