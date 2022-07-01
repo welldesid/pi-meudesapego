@@ -1,52 +1,50 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Estilizando Formulários</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Entrar</title>
+<link rel="icon" href="images/meudesapego.png"> <!-- DEFINIR IMAGEM LOGOTIPO FAV DA ONG -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/login.css"> <!-- REFERENCIANDO ARQUIVO LOCALIZADO css/login.css STYLE CONTROL -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
 
-    <!-- Estilo Customizado -->
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+<body>
 
-    <!-- CSS Alto Contraste - Acessibilidade -->
-    <link rel="stylesheet" type="text/css" href="css/altoContraste.css">
-  </head>
-  <body>
-    <header>
-      <div style="margin-top: 0.3%">
-        <!-- Menu de Acessibilidade -->
-        <?php 
-          require_once("menu-acessibilidade.php");
-        ?>
-        <!-- Fim menu de acessibilidade -->
-      </div>
-    </header>
-    <div id="container" style="padding-top: 2%">
-      <img src="images/perfil.png">
-
-      <form action="controllers/login-controller.php" method="post">
-        <div>
-          <input type="email" class="email" name="email" id="email" placeholder="Digite seu e-mail">
+<div class="login-form">
+    <form action="controllers/login-controller.php" method="post">
+        <h2 class="text-center">Entrar</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" required="required">
         </div>
-        <div>
-          <input type="password" class="senha" name="senha" id="senha" placeholder="Digite sua senha">
+        <div class="form-group">
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required="required">
         </div>
-        <div>
-          <input type="submit" class="submit" value="Logar">
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
         </div>
 
-        <div>
-          <a href="cad_doador.html">Ainda não tenho cadastro!</a>
-        </div>
-      </form>
-    </div>
-    
-    <!-- Início VLibras -->
+
+<!-- FUNÇÃO "ESQUECEU A SENHA" e "LEMBRAR-ME" DEIXEI DESABILITADO POIS AINDA NÃO TEMOS ESSA FUNÇÃO NO BACKEND -->
+       <!-- <div class="clearfix">
+
+
+
+            <label class="float-left form-check-label"><input type="checkbox"> Lembrar-me</label>
+            <a href="#" class="float-right">Esqueceu a senha?</a>
+        </div> -->       
+    </form>
+    <a href="cad_doadorv2.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Quero me cadastrar!</a>
+    <a href="index.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Voltar à página inicial</a>
+</div>
+<!-- Início VLibras -->
       <?php 
         require_once("vlibras.php");
       ?>
     <!-- Fim VLibras -->
-  </body>
+</body>
 </html>

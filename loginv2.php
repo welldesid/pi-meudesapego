@@ -41,5 +41,10 @@
     <a href="cad_doadorv2.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Quero me cadastrar!</a>
     <a href="index.php" class="btn btn-light btn-block" role="button" aria-pressed="true">Voltar à página inicial</a>
 </div>
+<!-- Início VLibras -->
+      <?php 
+        require_once("vlibras.php");
+      ?>
+    <!-- Fim VLibras -->
 </body>
 </html>
