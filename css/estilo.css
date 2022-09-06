@@ -81,6 +81,11 @@ nav.navbar-transparente {
 
 /* Estrutura conteúdos
 -----------------------------*/
+.responsive{
+	width: auto;
+}
+
+
 .caixa {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -90,7 +95,7 @@ nav.navbar-transparente {
 
 #servicos {
 	background-color: white;
-	width: 100%;
+	width: auto;
 
 
 }
@@ -336,8 +341,15 @@ input.submit {
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
 	h1 {
-		font-size: 4em;
+		font-size: 3em;
 	}
+}
+
+@media (min-width: 800px) {
+    .cad-form {
+    width: 50%;
+    margin: 50px auto;
+    font-size: 15px;
 }
 
 /* Large devices (desktops, 992px and up)*/

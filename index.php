@@ -21,6 +21,15 @@
     <!-- CSS Alto Contraste - Acessibilidade -->
     <link rel="stylesheet" type="text/css" href="css/altoContraste.css">
 
+    <!-- Esconder a imagem em dispositivos com menores resoluções -->
+    <style>
+        @media screen and (max-width: 999px){
+            .hide-on-mobile {
+                display: none;
+            }
+        }
+    </style> 
+
     <title>Meu Desapego</title>
     <link rel="icon" href="logo_art/favicon.png">
   </head>
@@ -31,7 +40,7 @@
         <div class="container">
           
           <a href="index.php" class="navbar-brand">
-            <img src="images/meud.png" width="150px">
+            <img src="images/meud.png" width="100px">
           </a>
 
           <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
@@ -109,8 +118,8 @@
                   <h3>O que é feito com minha doação?</h3>
                   <p>Todas as doações são enviadas para famílias necessitadas, caso tenha interesse em saber o processo de sua doação, entre em contato com nossa equipe para mais informações</p>
                 </div>
-                <div class="col-4 col-sm-6">
-                  <img src="images/fa4.png" width="200%">
+                <div class="col-4 col-sm-6 hide-on-mobile">
+                  <img src="images/fa4.png" style="max-width:400%;height:auto;">
                 </div>
               </div>
             </div>
@@ -122,7 +131,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="images/meud.png" width="142">
+            <img src="images/meud.png" width="100">
           </div>
           <div class="col-md-2">
             <h4>ONG</h4>
