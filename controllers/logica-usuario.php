@@ -50,6 +50,10 @@
 		return $_SESSION['usuario_logado'];
 	}
 
+	function idUsuario(){
+		return $_SESSION['iddoador'];
+	}
+
 	function criaCookie($email)
 	{
 		$_SESSION['usuario_logado'] = $email;

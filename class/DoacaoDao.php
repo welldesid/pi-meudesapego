@@ -18,14 +18,46 @@ class DoacaoDao
 		$query = "insert into doacao (titulo, descricao, foto, status, dt_doacao, iddoador, idcategoria, idong) values ('{$doacao->getTitulo()}', '{$doacao->getDescricao()}', '{$doacao->getFoto()}', '{$doacao->getStatus()}', NOW(), {$doacao->getDoador()}, {$doacao->getCategoria()->getId()}, {$doacao->getOng()})";
 
 		return mysqli_query($this->conexao, $query);
-	} //$doacao->getDoador()->getId() / $doacao->getOng()->getId()
+	}
 
-	function listaDoacoes()
+
+	function listaDoacoes($pesquisa='')
 	{
 		$doacoes = array();
-		$resultado = mysqli_query($this->conexao, "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria");
+		$consulta = "select * from doacao as d join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status";
+		$resultado = mysqli_query($this->conexao, $consulta);
 		//var_dump($resultado);
-		while ($doacao_array = mysqli_fetch_assoc($resultado)){
+
+
+		/** INÍCIO PAGINAÇÃO **/
+		$total_reg = "4"; //número de registros por página
+		$pagina = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
+
+		if (!$pagina) {
+			$pc = "1";
+		} else {
+			$pc = $pagina;
+		}
+		
+		//Determina o valor inicial das buscas limitadas
+		$inicio = $pc -1;
+		$inicio = $inicio * $total_reg;
+
+		//Seleciona os dados e exibe a paginação
+		$limite = mysqli_query($this->conexao, "select * from doacao as d left join categoria as c on c.idcategoria = d.idcategoria where titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or status like '%$pesquisa%' or c.nome like '%$pesquisa%' order by status != 'Disponível', status LIMIT $inicio, $total_reg");
+		$todos = mysqli_query($this->conexao, $consulta);
+
+		$tr = mysqli_num_rows($todos); //verifica o numero total de registros
+		$tp = $tr / $total_reg; //verifica o número total de páginas
+
+
+		$_SESSION['pc'] = $pc;
+		$_SESSION['tp'] = $tp;
+		/** FIM PAGINAÇÃO **/
+
+
+
+		while ($doacao_array = mysqli_fetch_assoc($limite)){
 			$categoria = new Categoria('');
 			$categoria->setNome($doacao_array['nome']);
 
@@ -40,12 +72,16 @@ class DoacaoDao
 
 			array_push($doacoes, $doacao);
 		}
+
+
 		return $doacoes;
 	}
 
+
+	/*Função responsável por encontrar item a ser editado*/
 	function buscaDoacao($iddoacao)
 	{
-		$query = "select * from doacao where iddoacao = {$iddoacao}";
+		$query = "select * from doacao d left join doador xd on xd.iddoador = d.iddoador left join doador_has_telefone dht on xd.iddoador = dht.iddoador left join telefone t on dht.idtelefone = t.idtelefone left join endereco en on xd.idendereco = en.idendereco left join rua r on en.idrua = r.idrua left join bairro b on en.idbairro = b.idbairro left join cidade ci on en.idcidade = ci.idcidade where iddoacao = {$iddoacao}";
 
 		$resultado = mysqli_query($this->conexao, $query);
 
@@ -53,23 +89,31 @@ class DoacaoDao
 
 		$categoria = new Categoria('');
 		$categoria->setId($doacao_buscada['idcategoria']);
-
-		/* 
-		Doador		
-
-		$doador = new Doador();
-		$doador->setId($doacao_buscada['iddoador']);
-		*/
 	
 		$titulo = $doacao_buscada['titulo'];
 		$descricao = $doacao_buscada['descricao'];
 		$foto = $doacao_buscada['foto'];
 		$status = $doacao_buscada['status'];
 		$dt_doacao = $doacao_buscada['dt_doacao'];
-		$iddoador = 1; //provisório
-		$idong = 1;
+		$iddoador = $doacao_buscada['iddoador'];
+		$idong = $doacao_buscada['idong'];
 
-		$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, $categoria, $idong); //Falta doador.
+		$doador = $doacao_buscada['nome_completo'];
+		$telefone = $doacao_buscada['telefone'];
+		$numero = $doacao_buscada['numero'];
+		$rua = $doacao_buscada['rua'];
+		$bairro = $doacao_buscada['bairro'];
+		$cidade = $doacao_buscada['cidade'];
+
+		$_SESSION['doador'] = $doador;
+		$_SESSION['telefone'] = $telefone;
+		$_SESSION['numero'] = $numero;
+		$_SESSION['rua'] = $rua;
+		$_SESSION['bairro'] = $bairro;
+		$_SESSION['cidade'] = $cidade;
+		$_SESSION['iddoador'] = $iddoador;
+
+		$doacao = new Doacao($titulo, $descricao, $foto, $status, $dt_doacao, $iddoador, $categoria, $idong);
 		$doacao->setId($doacao_buscada['iddoacao']);
 
 		return $doacao;
