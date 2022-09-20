@@ -182,16 +182,18 @@
 
     <!-- Service Worker -->
       <script type="text/javascript">
-        function registerServiceWorker(){
+        //function registerServiceWorker(){
           //registrando o service worker para navegadores com suporte
           if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js', {scope: '/'}).then(() => {
-              console.log('Service Worker registrado com sucesso!');
-            }).catch(error => {
-              console.log('Service Worker falhou: ', error);
+            navigator.serviceWorker.register('sw.js')
+            .then(function(registration){
+              console.info('Service Worker registrado com sucesso!', registration.scope);
+            })
+            .catch(function(err) {
+              console.error('Service Worker falhou: ', err);
             });
           }
-        }
+        //}
       </script>
     <!-- Fim Service Worker -->
   </body>

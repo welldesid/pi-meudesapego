@@ -1,5 +1,5 @@
 //Criando um nome para o arquivo de cache
-const staticCache = "meu-desapego-2022-09-20-14-25";
+const staticCache = "meu-desapego-2022-09-20-16-52";
 
 //Lista de arquivos que devem ser cacheados
 const files = [
