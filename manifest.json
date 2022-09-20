@@ -1,4 +1,5 @@
 {
+	"lang": "pt",
 	"name": "Projeto Integrador Meu Desapego",
 	"short_name": "Meu Desapego",
 	"icons": [
@@ -15,6 +16,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "/index.php",
+    "start_url": "/",
     "display": "standalone"
 }
